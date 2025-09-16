@@ -1,0 +1,50 @@
+.hero{
+    background-image: url('../images/home/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+body{
+      font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+}
+
+/* ***********************************NAVBAR************************** */
+.nav-elements{
+    transition: all 0.3s ease;
+}
+.nav-elements:hover{
+     color: #037c3e !important; 
+    transform: scale(1.1);   
+}
+.active{
+    color: #037c3e !important;
+    font-weight: bold !important;
+}
+.join-btn{
+background-color:  #037c3e ;
+ color :  #fff
+}
+.join-btn:hover{
+    background-color: #014220;
+    color :  #fff
+}
