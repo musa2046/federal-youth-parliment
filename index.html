@@ -116,20 +116,27 @@
 
     
     <!-- ******************** HERO *********************** -->
-    <section class="w-full bg-white py-20 hero">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col gap-6 relative z-20">
-        <h1 class="font-extrabold text-4xl md:text-5xl">
-        Standing for <span class="text-green-700">YOUTH</span>
-        </h1>
-        <p class="text-lg text-gray-600">
-        We are leading the political platform for young minds.
-        </p>
-        <a href="/membership"
-        class="hidden lg:inline-block bg-green-700 text-white font-bold rounded-full px-6 py-3 mt-2 hover:bg-green-800 transition">
-        Join FYP Now
-        </a>
-    </div>
-    </section>
+    <section 
+  class="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-white text-center"
+  style="background-image: url('../images/home/bg.jpg');"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-3xl mx-auto px-4 flex flex-col gap-6">
+    <h1 class="font-extrabold text-4xl md:text-5xl">
+      Standing for <span class="text-green-500">YOUTH</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-200">
+      We are leading the political platform for young minds.
+    </p>
+    <a href="/membership"
+      class="hidden lg:inline-block bg-green-700 text-white font-bold rounded-full px-6 py-3 mt-2 hover:bg-green-800 transition">
+      Join FYP Now
+    </a>
+  </div>
+</section>
 
     <!-- ******************** ABOUT *********************** -->
     <section class="w-full py-16 bg-[#FAF3DD]">
@@ -143,16 +150,123 @@
         </p>
         <a href="/membership"
             class="hidden lg:inline-block bg-green-700 text-white font-bold rounded-full px-6 py-3 mt-2 hover:bg-green-800 transition w-fit">
-            Join FYP Now
+            Learn More
         </a>
         </div>
-        <img src="/images/about-img.jpg"
+        <img src="/images/home/about-img.jpg"
             alt="About FYP"
             class="w-full md:w-1/2 rounded-lg shadow-md object-cover" />
     </div>
     </section>
+    <!-- *******************************************program Cards******************* -->
+    <section class="w-full py-16 bg-green-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Our Programs</h1>
 
-    <img src="images/home/bg.jpg" alt="">
+    <!-- Cards Grid -->
+    <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="/images/home/bg2.jpg" alt="Youth Gathering" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h5 class="text-xl font-semibold text-gray-800">Youth Gathering</h5>
+          <p class="mt-3 text-gray-600">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="/images/home/bg2.jpg" alt="Youth Gathering" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h5 class="text-xl font-semibold text-gray-800">Leadership Program</h5>
+          <p class="mt-3 text-gray-600">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="/images/home/bg2.jpg" alt="Youth Gathering" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h5 class="text-xl font-semibold text-gray-800">Skill Development</h5>
+          <p class="mt-3 text-gray-600">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="mt-10 flex justify-center">
+      <a href="/programs" class="bg-green-700 text-white font-bold rounded-full px-6 py-3 hover:bg-green-800 transition">
+        See more
+      </a>
+    </div>
+  </div>
+</section>
+    <!-- ************************************************executive CArds********************************* -->
+<section class="w-full py-20 bg-[#FAF3DD]">
+  <div class="max-w-6xl mx-auto px-4">
+    <h1 class="font-bold text-3xl">Executive Members</h1>
+
+    <!-- Cards wrapper -->
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Single Card -->
+      <div class="max-w-md bg-white shadow-sm rounded-xl p-4">
+        <div class="flex items-start">
+          <!-- Avatar -->
+          <img src="/images/home/about-img.jpg" alt="Member Name"
+            class="w-16 h-16 rounded-full object-cover border-2 border-gray-300 mr-4" />
+          
+          <!-- Details -->
+          <div>
+            <h5 class="font-bold mb-1">Member Name</h5>
+            <p class="text-gray-500 text-sm mb-2">Designation</p>
+            <p class="text-sm text-gray-700">Short description about this member and their role in FYP.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate for more members -->
+      <div class="max-w-md bg-white shadow-sm rounded-xl p-4">
+        <div class="flex items-start">
+          <img src="/images/home/about-img.jpg" alt="Member Name"
+            class="w-16 h-16 rounded-full object-cover border-2 border-gray-300 mr-4" />
+          <div>
+            <h5 class="font-bold mb-1">Member Name</h5>
+            <p class="text-gray-500 text-sm mb-2">Designation</p>
+            <p class="text-sm text-gray-700">Short description about this member and their role in FYP.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-md bg-white shadow-sm rounded-xl p-4">
+        <div class="flex items-start">
+          <img src="/images/home/about-img.jpg" alt="Member Name"
+            class="w-16 h-16 rounded-full object-cover border-2 border-gray-300 mr-4" />
+          <div>
+            <h5 class="font-bold mb-1">Member Name</h5>
+            <p class="text-gray-500 text-sm mb-2">Designation</p>
+            <p class="text-sm text-gray-700">Short description about this member and their role in FYP.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Button -->
+    <a href="/programs"
+       class="block w-max mx-auto mt-8 bg-green-700 text-white font-bold rounded-full px-6 py-3 hover:bg-green-800 transition">
+      See more
+    </a>
+
+  </div>
+</section>
 
     <script src="scripts/script.js"></script>
 </body>
