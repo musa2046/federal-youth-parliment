@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Navbar -->
-<nav class="bg-white shadow-md sticky top-0 z-50">
+<nav class="bg-white shadow-md h-16  sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16">
       <!-- Brand -->
@@ -73,7 +73,7 @@
 
   <!-- CTA -->
   <a href="/pages/membership.html"
-     class="ml-4 bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 hover:scale-110 transition transform duration-200">
+     class="ml-4 bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 ">
     Join Us
   </a>
 </div>
@@ -109,17 +109,24 @@
   </div>
 </nav>
 
+<main>
     
     <!-- ******************** HERO *********************** -->
-    <section 
-  class="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-white text-center"
-  style="background-image: url('../images/home/bg.jpg');"
->
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <!-- Hero Section with Slideshow -->
+<section class="relative h-screen flex items-center justify-center text-center text-white">
+  <!-- Background Slideshow -->
+  <div id="slideshow" class="absolute inset-0">
+    <img src="./images/home/bg.jpg" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" />
+    <img src="./images/home/about-img.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="./images/home/bg.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="./images/home/bg2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+  </div>
 
-  <!-- Content -->
-  <div class="relative z-10 max-w-3xl mx-auto px-4 flex flex-col gap-6">
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <!-- Hero Content -->
+    <div class="relative z-10 max-w-3xl mx-auto px-4 flex flex-col gap-6">
     <h1 class="font-extrabold text-4xl md:text-5xl">
       Standing for <span class="text-green-500">YOUTH</span>
     </h1>
@@ -132,6 +139,28 @@
     </a>
   </div>
 </section>
+
+    <!-- <section 
+  class="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-white text-center"
+  style="background-image: url('../images/home/bg.jpg');"
+>
+   Overlay
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+  <-- Content 
+  <div class="relative z-10 max-w-3xl mx-auto px-4 flex flex-col gap-6">
+    <h1 class="font-extrabold text-4xl md:text-5xl">
+      Standing for <span class="text-green-500">YOUTH</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-200">
+      We are leading the political platform for young minds.
+    </p>
+    <a href="/pages/membership.html"
+      class="  bg-green-700 text-white font-bold rounded-full px-6 py-3 mt-2 hover:bg-green-800 transition">
+      Join FYP Now
+    </a>
+  </div>
+</section> -->
 
     <!-- ******************** ABOUT *********************** -->
     <section class="w-full py-16 bg-[#FAF3DD]">
@@ -162,10 +191,10 @@
     <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       
       <!-- Card 1 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
         <img src="./images/home/bg2.jpg" alt="Youth Gathering" class="w-full h-48 object-cover">
         <div class="p-5">
-          <h5 class="text-xl font-semibold text-gray-800">Youth Gathering</h5>
+          <h5 class="text-xl font-semibold text-green-800">Youth Gathering</h5>
           <p class="mt-3 text-gray-600">
             Some quick example text to build on the card title and make up the bulk of the card's content.
           </p>
@@ -173,10 +202,10 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
         <img src="./images/home/bg2.jpg" alt="Youth Gathering" class="w-full h-48 object-cover">
         <div class="p-5">
-          <h5 class="text-xl font-semibold text-gray-800">Leadership Program</h5>
+          <h5 class="text-xl font-semibold text-green-800">Leadership Program</h5>
           <p class="mt-3 text-gray-600">
             Some quick example text to build on the card title and make up the bulk of the card's content.
           </p>
@@ -184,10 +213,10 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
         <img src="./images/home/bg2.jpg" alt="Youth Gathering" class="w-full h-48 object-cover">
         <div class="p-5">
-          <h5 class="text-xl font-semibold text-gray-800">Skill Development</h5>
+          <h5 class="text-xl font-semibold text-green-800">Skill Development</h5>
           <p class="mt-3 text-gray-600">
             Some quick example text to build on the card title and make up the bulk of the card's content.
           </p>
@@ -210,47 +239,114 @@
 
     <!-- Cards wrapper -->
     <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      
-      <!-- Single Card -->
-      <div class="max-w-md bg-white shadow-sm rounded-xl p-4">
-        <div class="flex items-start">
-          <!-- Avatar -->
-          <img src="./images/home/about-img.jpg" alt="Member Name"
-            class="w-16 h-16 rounded-full object-cover border-2 border-gray-300 mr-4" />
-          
-          <!-- Details -->
-          <div>
-            <h5 class="font-bold mb-1">Member Name</h5>
-            <p class="text-gray-500 text-sm mb-2">Designation</p>
-            <p class="text-sm text-gray-700">Short description about this member and their role in FYP.</p>
-          </div>
-        </div>
-      </div>
+      <!-- Card 1 -->
+    <div class="max-w-sm mx-auto shadow-xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-2xl  relative transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="./images/executives/musa.jpg" alt="Background"
+      class="w-full h-full object-cover opacity-60" />
+    <div class="absolute inset-0 bg-green-50 bg-opacity-60"></div>
+  </div>
+
+  <!-- Profile Content -->
+  <div class="relative flex flex-col items-center p-6">
+    <img src="./images/executives/musa.jpg" alt="President"
+      class="w-40 h-40 rounded-full border-4 border-green-600 shadow-md object-cover mb-4" />
+    <h3 class="text-xl font-bold text-gray-800">Musa Bukhari</h3>
+    <p class="text-green-700 font-semibold mb-3">President</p>
+    <p class="text-gray-700 text-center text-sm leading-relaxed">
+      Visionary leader dedicated to empowering youth through innovation, collaboration, 
+      and impactful community programs.
+    </p>
+  </div>
+
+  <!-- Social Media -->
+  <div class="relative flex justify-center gap-6 py-4 bg-white/70 backdrop-blur-md border-t">
+    <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</div>
 
       <!-- Duplicate for more members -->
-      <div class="max-w-md bg-white shadow-sm rounded-xl p-4">
-        <div class="flex items-start">
-          <img src="./images/home/about-img.jpg" alt="Member Name"
-            class="w-16 h-16 rounded-full object-cover border-2 border-gray-300 mr-4" />
-          <div>
-            <h5 class="font-bold mb-1">Member Name</h5>
-            <p class="text-gray-500 text-sm mb-2">Designation</p>
-            <p class="text-sm text-gray-700">Short description about this member and their role in FYP.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="max-w-md bg-white shadow-sm rounded-xl p-4">
-        <div class="flex items-start">
-          <img src="./images/home/about-img.jpg" alt="Member Name"
-            class="w-16 h-16 rounded-full object-cover border-2 border-gray-300 mr-4" />
-          <div>
-            <h5 class="font-bold mb-1">Member Name</h5>
-            <p class="text-gray-500 text-sm mb-2">Designation</p>
-            <p class="text-sm text-gray-700">Short description about this member and their role in FYP.</p>
-          </div>
-        </div>
-      </div>
+     <!--  Card 2 -->
+<div class="max-w-sm mx-auto shadow-xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-2xl transition duration-300 relative transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="./images/executives/musa.jpg" alt="Background"
+      class="w-full h-full object-cover opacity-60" />
+    <div class="absolute inset-0 bg-green-50 bg-opacity-60"></div>
+  </div>
+
+  <!-- Profile Content -->
+  <div class="relative flex flex-col items-center p-6">
+    <img src="./images/executives/musa.jpg" alt="President"
+      class="w-40 h-40 rounded-full border-4 border-green-600 shadow-md object-cover mb-4" />
+    <h3 class="text-xl font-bold text-gray-800">Musa Bukhari</h3>
+    <p class="text-green-700 font-semibold mb-3">President</p>
+    <p class="text-gray-700 text-center text-sm leading-relaxed">
+      Visionary leader dedicated to empowering youth through innovation, collaboration, 
+      and impactful community programs.
+    </p>
+  </div>
+
+  <!-- Social Media -->
+  <div class="relative flex justify-center gap-6 py-4 bg-white/70 backdrop-blur-md border-t">
+    <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</div>
+
+
+      <!-- card 3 -->
+<div class="max-w-sm mx-auto shadow-xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-2xl transition duration-300 relative transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="./images/executives/musa.jpg" alt="Background"
+      class="w-full h-full object-cover opacity-60" />
+    <div class="absolute inset-0 bg-green-50 bg-opacity-60"></div>
+  </div>
+
+  <!-- Profile Content -->
+  <div class="relative flex flex-col items-center p-6">
+    <img src="./images/executives/musa.jpg" alt="President"
+      class="w-40 h-40 rounded-full border-4 border-green-600 shadow-md object-cover mb-4" />
+    <h3 class="text-xl font-bold text-gray-800">Musa Bukhari</h3>
+    <p class="text-green-700 font-semibold mb-3">President</p>
+    <p class="text-gray-700 text-center text-sm leading-relaxed">
+      Visionary leader dedicated to empowering youth through innovation, collaboration, 
+      and impactful community programs.
+    </p>
+  </div>
+
+  <!-- Social Media -->
+  <div class="relative flex justify-center gap-6 py-4 bg-white/70 backdrop-blur-md border-t">
+    <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</div>
+
 
     </div>
 
@@ -262,6 +358,10 @@
 
   </div>
 </section>
+  
+
+<!-- ***********************************************contact form**************************************** -->
+
 
  <!-- Section -->
   <section class="relative bg-gray-900 text-white">
@@ -276,7 +376,7 @@
       
       <!-- Left Text -->
       <div class="flex flex-col justify-center">
-        <p class="text-green-400 font-semibold mb-2">JOIN WITH US</p>
+        <p class="text-green-400 font-semibold mb-2">BE A PART OF FYP</p>
         <h2 class="text-4xl font-extrabold leading-tight mb-4">
           Join Us Today And Start <br> Making An Impact!
         </h2>
@@ -302,73 +402,80 @@
     </div>
   </section>
 
-   <!-- Footer -->
-  <footer class="bg-[#0b162c] text-white py-10">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+</main>
+<!-- Footer -->
+<footer class="bg-white text-gray-800 py-12 border-t border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
 
-      <!-- Quick Links -->
-      <div>
-        <h2 class="text-xl font-bold mb-4">Quick Links</h2>
-        <ul class="space-y-2">
-          <li><a href="#" class="text-green-500 hover:underline">Privacy Policy</a></li>
-          <li><a href="#" class="text-green-500 hover:underline">About Us</a></li>
-          <li><a href="#" class="text-green-500 hover:underline">Contact</a></li>
-          <li><a href="#" class="text-green-500 hover:underline">Terms and Conditions</a></li>
-        </ul>
-      </div>
-
-      <!-- Logo + Description -->
-      <div class="text-center">
-        <div class="flex justify-center items-center mb-3">
-          <img src="./images/logo.jpg" alt="Logo" class="w-12 h-12 mr-2">
-          <h2 class="text-xl font-bold">
-            Youth Organization <span class="text-green-600">PAKISTAN</span>
-          </h2>
-        </div>
-        <p class="text-gray-300 text-sm">
-          Youth Organization Pakistan (YOP), founded in 2021, empowers 15,000+ members 
-          to drive social change, leadership, innovation, and national progress through 
-          development initiatives and global engagement.
-        </p>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <h2 class="text-xl font-bold mb-4">Contact</h2>
-        <ul class="space-y-3 text-gray-300">
-          <li class="flex items-center gap-2">
-            <i class="fa-solid fa-location-dot text-green-500"></i>
-            Royal Avenue, Islamabad, Pakistan
-          </li>
-          <li class="flex items-center gap-2">
-            <i class="fa-solid fa-phone text-green-500"></i>
-            +92 332 0047146
-          </li>
-          <li class="flex items-center gap-2">
-            <i class="fa-solid fa-envelope text-green-500"></i>
-            info@pakistanyouthorganization.com
-          </li>
-        </ul>
-
-        <!-- Social Icons -->
-        <div class="flex gap-4 mt-4">
-          <a href="#" class="bg-green-600 p-2 rounded-full text-white hover:bg-green-700">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="#" class="bg-green-600 p-2 rounded-full text-white hover:bg-green-700">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a href="#" class="bg-green-600 p-2 rounded-full text-white hover:bg-green-700">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="#" class="bg-green-600 p-2 rounded-full text-white hover:bg-green-700">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
-
+    <!-- Quick Links -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4 text-green-600">Quick Links</h2>
+      <ul class="space-y-2 text-gray-600">
+        <li><a href="#" class="hover:text-green-700 transition">Privacy Policy</a></li>
+        <li><a href="/pages/about.html" class="hover:text-green-700 transition">About Us</a></li>
+        <li><a href="/pages/contact.html" class="hover:text-green-700 transition">Contact</a></li>
+        <li><a href="#" class="hover:text-green-700 transition">Terms & Conditions</a></li>
+      </ul>
     </div>
-  </footer>
+
+    <!-- Logo + Description -->
+    <div class="text-center">
+      <div class="flex justify-center items-center mb-4">
+        <img src="./images/logo.jpg" alt="Logo" class="w-14 h-14 mr-3 rounded-full shadow-lg border-2 border-green-600">
+        <h2 class="text-2xl font-bold">
+          Federal Youth <span class="text-green-600">PARLIMENT</span>
+        </h2>
+      </div>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Federal Youth Parliament (FYP) empowers young leaders from across Pakistan to engage in policy, leadership, and community development — driving innovation, collaboration, and a brighter future for the nation.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4 text-green-600">Contact</h2>
+      <ul class="space-y-3 text-gray-600 text-sm">
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-location-dot text-green-600"></i>
+          Royal Avenue, Islamabad, Pakistan
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-phone text-green-600"></i>
+          +92 000 0000000
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-green-600"></i>
+          info@federalyouthparliment.com
+        </li>
+      </ul>
+
+      <!-- Social Icons -->
+      <div class="flex gap-4 mt-5">
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition"">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition"">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition"">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition"">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Line -->
+  <div class="mt-10 border-t border-gray-200 pt-4 text-center text-sm text-gray-500">
+    © 2025 <span class="text-green-600 font-semibold">Federal Youth Parliment</span>. 
+    <span class="text-yellow-600">All rights reserved.</span>
+  </div>
+</footer>
+
+
 
     <script src="scripts/script.js"></script>
 </body>
