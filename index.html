@@ -11,6 +11,9 @@
     <!-- swiper.js for news section -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 
 </head>
 <body>
@@ -116,8 +119,7 @@
 
 <main>
     
-    <!-- ******************** HERO *********************** -->
-    <!-- Hero Section with Slideshow -->
+   <!-- ******************** HERO *********************** -->
 <section class="relative h-screen flex items-center justify-center text-center text-white">
   <!-- Background Slideshow -->
   <div id="slideshow" class="absolute inset-0">
@@ -128,376 +130,403 @@
   </div>
 
   <!-- Dark Overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
 
   <!-- Hero Content -->
-    <div class="relative z-10 max-w-3xl mx-auto px-4 flex flex-col gap-6">
-    <h1 class="font-extrabold text-4xl md:text-5xl">
-      Standing for <span class="text-green-500">YOUTH</span>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center text-center" data-aos="fade-up">
+    <!-- Tagline -->
+    <span class="inline-block bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium tracking-wide mb-4 animate-pulse">
+      Empowering Youth • Shaping Future
+    </span>
+
+    <!-- Heading -->
+    <h1 class="font-extrabold text-4xl md:text-6xl leading-tight mb-4 drop-shadow-lg">
+      Federal Youth <span class="text-green-500">Parliament</span>
     </h1>
-    <p class="text-lg md:text-xl text-gray-200">
-      We are leading the political platform for young minds.
+
+    <!-- Subtext -->
+    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
+      A united platform where young leaders raise their voices, create impact, and lead Pakistan toward a brighter tomorrow.
     </p>
-    <a href="/pages/membership.html"
-      class="  bg-green-700 text-white font-bold rounded-full px-6 py-3 mt-2 hover:bg-green-800 transition">
-      Join FYP Now
-    </a>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4" >
+      <a href="/pages/membership.html"
+        class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full px-6 py-3 shadow-lg transition transform hover:scale-105">
+        Join FYP Now
+      </a>
+      <a href="/pages/about.html"
+        class="bg-white/90 hover:bg-white text-green-700 font-semibold rounded-full px-6 py-3 shadow-lg transition transform hover:scale-105">
+        Learn More
+      </a>
+    </div>
   </div>
 </section>
 
-    <!-- <section 
-  class="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-white text-center"
-  style="background-image: url('../images/home/bg.jpg');"
->
-   Overlay
-  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    
 
-  <-- Content 
-  <div class="relative z-10 max-w-3xl mx-auto px-4 flex flex-col gap-6">
-    <h1 class="font-extrabold text-4xl md:text-5xl">
-      Standing for <span class="text-green-500">YOUTH</span>
-    </h1>
-    <p class="text-lg md:text-xl text-gray-200">
-      We are leading the political platform for young minds.
-    </p>
-    <a href="/pages/membership.html"
-      class="  bg-green-700 text-white font-bold rounded-full px-6 py-3 mt-2 hover:bg-green-800 transition">
-      Join FYP Now
-    </a>
-  </div>
-</section> -->
+ <!-- ******************** ABOUT *********************** -->
+<section class="w-full py-20 bg-gradient-to-r from-green-50 via-[#FAF3DD] to-green-50">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
 
-    <!-- ******************** ABOUT *********************** -->
-    <section class="w-full py-16 bg-[#FAF3DD]">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-        <div class="flex flex-col gap-6">
-        <h1 class="text-3xl font-bold">About FYP</h1>
-        <p class="text-lg text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae totam natus
-            tenetur voluptatibus sequi incidunt sunt rem, ea voluptate suscipit dolore cumque
-            at voluptas repellat!
-        </p>
-        <a href="/membership"
-            class="hidden lg:inline-block bg-green-700 text-white font-bold rounded-full px-6 py-3 mt-2 hover:bg-green-800 transition w-fit">
-            Learn More
-        </a>
-        </div>
-        <img src="./images/home/about-img.jpg"
-            alt="About FYP"
-            class="w-full md:w-1/2 rounded-lg shadow-md object-cover" />
+    <!-- Text Content -->
+    <div class="flex-1 flex flex-col gap-6" data-aos="fade-right">
+      <span class="inline-block bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium tracking-wide w-fit">
+        Who We Are
+      </span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+        About <span class="text-green-600">Federal Youth Parliament</span>
+      </h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        The Federal Youth Parliament is a vibrant platform uniting young leaders to 
+        address social, political, and economic challenges. Through collaboration, 
+        innovation, and civic engagement, we empower youth to shape a brighter 
+        and more inclusive future for Pakistan.
+      </p>
+      <a href="/pages/about.html"
+        class="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full px-6 py-3 shadow-lg transition transform hover:scale-105 w-fit">
+        Learn More
+      </a>
     </div>
-    </section>
-    <!-- *******************************************program Cards******************* -->
-    <section class="w-full py-16 bg-green-50">
-  <div class="max-w-6xl mx-auto px-4">
-    <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Our Programs</h1>
+
+    <!-- Image -->
+    <div class="flex-1 relative" data-aos="fade-left">
+      <img src="./images/home/about-img.jpg" 
+           alt="About FYP"
+           class="w-full rounded-2xl shadow-xl object-cover border-4 border-white" />
+      <div class="absolute -top-6 -left-6 w-24 h-24 bg-green-100 rounded-full -z-10"></div>
+      <div class="absolute -bottom-6 -right-6 w-28 h-28 bg-yellow-100 rounded-full -z-10"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ******************************************* PROGRAM CARDS ******************* -->
+<section class="w-full py-20 bg-green-50">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Heading -->
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
+        Our <span class="text-green-700">Programs</span>
+      </h2>
+      <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+        Federal Youth Parliament runs diverse initiatives to empower youth, 
+        build leadership, and create meaningful impact in communities.
+      </p>
+    </div>
 
     <!-- Cards Grid -->
-    <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
       
       <!-- Card 1 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
-        <img src="./images/home/bg2.jpg" alt="Youth Gathering" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h5 class="text-xl font-semibold text-green-800">Youth Gathering</h5>
-          <p class="mt-3 text-gray-600">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl 
+                  transform transition duration-500 hover:-translate-y-2 hover:scale-[1.02]" 
+           data-aos="fade-up" data-aos-delay="100">
+        <img src="./images/programs/youth-gathering.jpg" 
+             alt="Youth Gathering" 
+             class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-800">Youth Gathering</h3>
+          <p class="mt-3 text-gray-600 leading-relaxed">
+            An engaging space where young leaders connect, share ideas, and 
+            collaborate to inspire meaningful social change.
           </p>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
-        <img src="./images/home/bg2.jpg" alt="Youth Gathering" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h5 class="text-xl font-semibold text-green-800">Leadership Program</h5>
-          <p class="mt-3 text-gray-600">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl 
+                  transform transition duration-500 hover:-translate-y-2 hover:scale-[1.02]" 
+           data-aos="fade-up" data-aos-delay="200">
+        <img src="./images/programs/leadership-program.jpg" 
+             alt="Leadership Program" 
+             class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-800">Leadership Program</h3>
+          <p class="mt-3 text-gray-600 leading-relaxed">
+            Training confident, ethical, and visionary leaders ready to 
+            influence the nation’s political and social landscape.
           </p>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
-        <img src="./images/home/bg2.jpg" alt="Youth Gathering" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <h5 class="text-xl font-semibold text-green-800">Skill Development</h5>
-          <p class="mt-3 text-gray-600">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl 
+                  transform transition duration-500 hover:-translate-y-2 hover:scale-[1.02]" 
+           data-aos="fade-up" data-aos-delay="300">
+        <img src="./images/programs/skill-development.jpg" 
+             alt="Skill Development" 
+             class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-green-800">Skill Development</h3>
+          <p class="mt-3 text-gray-600 leading-relaxed">
+            Equipping youth with skills in technology, communication, and 
+            entrepreneurship for a brighter future.
           </p>
         </div>
       </div>
     </div>
 
     <!-- CTA Button -->
-    <div class="mt-10 flex justify-center">
-      <a href="/pages/programs.html" class="bg-green-700 text-white font-bold rounded-full px-6 py-3 hover:bg-green-800 transition">
-        See more
+    <div class="mt-12 flex justify-center" data-aos="fade-up" data-aos-delay="400">
+      <a href="/pages/programs.html" 
+         class="bg-green-700 text-white font-bold rounded-full px-8 py-3 hover:bg-green-800 transition">
+        See More
       </a>
     </div>
   </div>
 </section>
-    <!-- ************************************************executive CArds********************************* -->
-<section class="w-full py-20 bg-[#FAF3DD]">
-  <div class="max-w-6xl mx-auto px-4">
-    <h1 class="font-bold text-3xl">Executive Members</h1>
 
-    <!-- Cards wrapper -->
-    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Card 1 -->
-    <div class="max-w-sm mx-auto shadow-xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-2xl  relative transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <img src="./images/executives/musa.jpg" alt="Background"
-      class="w-full h-full object-cover opacity-60" />
-    <div class="absolute inset-0 bg-green-50 bg-opacity-60"></div>
-  </div>
+<!-- ************************************************ EXECUTIVE CARDS ********************************* -->
+<section class="w-full py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
 
-  <!-- Profile Content -->
-  <div class="relative flex flex-col items-center p-6">
-    <img src="./images/executives/musa.jpg" alt="President"
-      class="w-40 h-40 rounded-full border-4 border-green-600 shadow-md object-cover mb-4" />
-    <h3 class="text-xl font-bold text-gray-800">Musa Bukhari</h3>
-    <p class="text-green-700 font-semibold mb-3">President</p>
-    <p class="text-gray-700 text-center text-sm leading-relaxed">
-      Visionary leader dedicated to empowering youth through innovation, collaboration, 
-      and impactful community programs.
-    </p>
-  </div>
-
-  <!-- Social Media -->
-  <div class="relative flex justify-center gap-6 py-4 bg-white/70 backdrop-blur-md border-t">
-    <a href="https://www.facebook.com/share/1726g84KvL/?mibextid=wwXIfr" class="text-gray-500 hover:text-green-700 transition text-xl">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com/federalyouthparliament?igsh=cGUwcnU3cWxmYWEx" class="text-gray-500 hover:text-green-700 transition text-xl">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-</div>
-
-      <!-- Duplicate for more members -->
-
-     <!--  Card 2 -->
-<div class="max-w-sm mx-auto shadow-xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-2xl transition duration-300 relative transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <img src="./images/executives/musa.jpg" alt="Background"
-      class="w-full h-full object-cover opacity-60" />
-    <div class="absolute inset-0 bg-green-50 bg-opacity-60"></div>
-  </div>
-
-  <!-- Profile Content -->
-  <div class="relative flex flex-col items-center p-6">
-    <img src="./images/executives/musa.jpg" alt="President"
-      class="w-40 h-40 rounded-full border-4 border-green-600 shadow-md object-cover mb-4" />
-    <h3 class="text-xl font-bold text-gray-800">Musa Bukhari</h3>
-    <p class="text-green-700 font-semibold mb-3">President</p>
-    <p class="text-gray-700 text-center text-sm leading-relaxed">
-      Visionary leader dedicated to empowering youth through innovation, collaboration, 
-      and impactful community programs.
-    </p>
-  </div>
-
-  <!-- Social Media -->
-  <div class="relative flex justify-center gap-6 py-4 bg-white/70 backdrop-blur-md border-t">
-    <a href="https://www.facebook.com/share/1726g84KvL/?mibextid=wwXIfr" class="text-gray-500 hover:text-green-700 transition text-xl">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    
-    <a href="https://www.instagram.com/federalyouthparliament?igsh=cGUwcnU3cWxmYWEx" class="text-gray-500 hover:text-green-700 transition text-xl">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-</div>
-
-
-      <!-- card 3 -->
-<div class="max-w-sm mx-auto shadow-xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-2xl transition duration-300 relative transform transition duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <img src="./images/executives/musa.jpg" alt="Background"
-      class="w-full h-full object-cover opacity-60" />
-    <div class="absolute inset-0 bg-green-50 bg-opacity-60"></div>
-  </div>
-
-  <!-- Profile Content -->
-  <div class="relative flex flex-col items-center p-6">
-    <img src="./images/executives/musa.jpg" alt="President"
-      class="w-40 h-40 rounded-full border-4 border-green-600 shadow-md object-cover mb-4" />
-    <h3 class="text-xl font-bold text-gray-800">Musa Bukhari</h3>
-    <p class="text-green-700 font-semibold mb-3">President</p>
-    <p class="text-gray-700 text-center text-sm leading-relaxed">
-      Visionary leader dedicated to empowering youth through innovation, collaboration, 
-      and impactful community programs.
-    </p>
-  </div>
-
-  <!-- Social Media -->
-  <div class="relative flex justify-center gap-6 py-4 bg-white/70 backdrop-blur-md border-t">
-    <a href="https://www.facebook.com/share/1726g84KvL/?mibextid=wwXIfr" class="text-gray-500 hover:text-green-700 transition text-xl">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-
-    <a href="https://www.instagram.com/federalyouthparliament?igsh=cGUwcnU3cWxmYWEx" class="text-gray-500 hover:text-green-700 transition text-xl">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-</div>
-
-
+    <!-- Heading -->
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
+        Our <span class="text-green-700">Executive Members</span>
+      </h2>
+      <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+        Meet the leadership team driving Federal Youth Parliament forward with vision, dedication, and passion for youth empowerment.
+      </p>
     </div>
 
-    <!-- CTA Button -->
-    <a href="/pages/executive.html"
-       class="block w-max mx-auto mt-8 bg-green-700 text-white font-bold rounded-full px-6 py-3 hover:bg-green-800 transition">
-      See more
-    </a>
+    <!-- Cards wrapper -->
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Card 1 -->
+      <div class="max-w-sm mx-auto shadow-xl rounded-2xl overflow-hidden relative 
+                  transform transition duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
+           data-aos="fade-up" data-aos-delay="100">
+        <!-- Background -->
+        <div class="absolute inset-0">
+          <img src="./images/executives/vice-president.jpg" alt="Vice President"
+               class="w-full h-full object-cover opacity-50" />
+          <div class="absolute inset-0 bg-green-50 bg-opacity-70"></div>
+        </div>
 
+        <!-- Content -->
+        <div class="relative flex flex-col items-center p-6">
+          <img src="./images/executives/vice-president.jpg" alt="Vice President"
+               class="w-36 h-36 rounded-full border-4 border-green-600 shadow-lg object-cover mb-4" />
+          <h3 class="text-xl font-bold text-gray-800">Salah Uddin Khan</h3>
+          <p class="text-green-700 font-semibold mb-3">Vice President</p>
+          <p class="text-gray-700 text-center text-sm leading-relaxed">
+            Visionary leader dedicated to empowering youth through innovation, collaboration, and impactful programs.
+          </p>
+        </div>
+
+        <!-- Social -->
+        <div class="relative flex justify-center gap-6 py-4 bg-white/70 backdrop-blur-md border-t">
+          <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="max-w-sm mx-auto shadow-xl rounded-2xl overflow-hidden relative 
+                  transform transition duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
+           data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute inset-0">
+          <img src="./images/executives/president.jpg" alt="President"
+               class="w-full h-full object-cover opacity-50" />
+          <div class="absolute inset-0 bg-green-50 bg-opacity-70"></div>
+        </div>
+        <div class="relative flex flex-col items-center p-6">
+          <img src="./images/executives/president.jpg" alt="President"
+               class="w-36 h-36 rounded-full border-4 border-green-600 shadow-lg object-cover mb-4" />
+          <h3 class="text-xl font-bold text-gray-800">Muhammad Ibrar Khilji</h3>
+          <p class="text-green-700 font-semibold mb-3">President</p>
+          <p class="text-gray-700 text-center text-sm leading-relaxed">
+            Driving change through youth leadership, innovation, and a commitment to national progress.
+          </p>
+        </div>
+        <div class="relative flex justify-center gap-6 py-4 bg-white/70 backdrop-blur-md border-t">
+          <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="max-w-sm mx-auto shadow-xl rounded-2xl overflow-hidden relative 
+                  transform transition duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
+           data-aos="fade-up" data-aos-delay="300">
+        <div class="absolute inset-0">
+          <img src="./images/executives/general-sect2.jpg" alt="General Secretary"
+               class="w-full h-full object-cover opacity-50" />
+          <div class="absolute inset-0 bg-green-50 bg-opacity-70"></div>
+        </div>
+        <div class="relative flex flex-col items-center p-6">
+          <img src="./images/executives/general-sect2.jpg" alt="General Secretary"
+               class="w-36 h-36 rounded-full border-4 border-green-600 shadow-lg object-cover mb-4" />
+          <h3 class="text-xl font-bold text-gray-800">Saqib Ali</h3>
+          <p class="text-green-700 font-semibold mb-3">General Secretary</p>
+          <p class="text-gray-700 text-center text-sm leading-relaxed">
+            Focused on strengthening youth engagement through collaboration, transparency, and impactful action.
+          </p>
+        </div>
+        <div class="relative flex justify-center gap-6 py-4 bg-white/70 backdrop-blur-md border-t">
+          <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-500 hover:text-green-700 transition text-xl"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-12 flex justify-center" data-aos="fade-up" data-aos-delay="400">
+      <a href="/pages/executive.html"
+         class="bg-green-700 text-white font-bold rounded-full px-8 py-3 hover:bg-green-800 transition">
+        See More
+      </a>
+    </div>
   </div>
 </section>
+
   
-<!-- **************************************NEWS******************************************* -->
-<section class="py-12 bg-gray-50">
+<!-- ************************************** NEWS ******************************************* -->
+<section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-6">
-    <h1 class="font-bold text-3xl my-8">News and Updates</h1>
+
+    <!-- Heading -->
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
+        News & <span class="text-green-700">Updates</span>
+      </h2>
+      <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+        Stay updated with the latest activities, events, and initiatives from the Federal Youth Parliament.
+      </p>
+    </div>
 
     <!-- Swiper -->
-    <div class="swiper mySwiper relative">
+    <div class="swiper mySwiper relative" data-aos="fade-up" data-aos-delay="100">
       <div class="swiper-wrapper">
 
         <!-- Slide 1 -->
         <div class="swiper-slide p-4">
-          <a href="/pages/news.html" class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
+          <a href="/pages/news.html" 
+             class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
             <div class="relative">
-              <img src="./images/home/bg2.jpg" alt="news1" class="h-72 w-full object-cover" />
-              <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6">
+              <img src="./images/home/bg2.jpg" alt="Youth Summit" class="h-80 w-full object-cover" />
+              <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
                 <h3 class="text-2xl font-bold text-white mb-2">Youth Summit 2025</h3>
-                <p class="text-gray-200 text-sm mb-3">
-                  Highlights from our national youth summit and future initiatives for leadership growth.
-                </p>
+                <p class="text-gray-200 text-sm mb-3">Highlights from our national youth summit and future initiatives for leadership growth.</p>
                 <span class="text-green-400 font-semibold hover:underline">Read More →</span>
               </div>
             </div>
           </a>
         </div>
-
         <!-- Slide 2 -->
         <div class="swiper-slide p-4">
-          <a href="/pages/news.html" class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
+          <a href="/pages/news.html" 
+             class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
             <div class="relative">
-              <img src="./images/home/bg.jpg" alt="news2" class="h-72 w-full object-cover" />
-              <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6">
-                <h3 class="text-2xl font-bold text-white mb-2">Community Development Drive</h3>
-                <p class="text-gray-200 text-sm mb-3">
-                  FYP members launched impactful projects to uplift underprivileged communities.
-                </p>
+              <img src="./images/home/bg2.jpg" alt="Youth Summit" class="h-80 w-full object-cover" />
+              <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
+                <h3 class="text-2xl font-bold text-white mb-2">Youth Summit 2025</h3>
+                <p class="text-gray-200 text-sm mb-3">Highlights from our national youth summit and future initiatives for leadership growth.</p>
                 <span class="text-green-400 font-semibold hover:underline">Read More →</span>
               </div>
             </div>
           </a>
         </div>
-
         <!-- Slide 3 -->
         <div class="swiper-slide p-4">
-          <a href="/pages/news.html" class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
+          <a href="/pages/news.html" 
+             class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
             <div class="relative">
-              <img src="./images/home/about-img.jpg" alt="news3" class="h-72 w-full object-cover" />
-              <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6">
-                <h3 class="text-2xl font-bold text-white mb-2">Leadership Training Program</h3>
-                <p class="text-gray-200 text-sm mb-3">
-                  Building leadership among the youth parliament through specialized training.
-                </p>
+              <img src="./images/home/bg2.jpg" alt="Youth Summit" class="h-80 w-full object-cover" />
+              <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
+                <h3 class="text-2xl font-bold text-white mb-2">Youth Summit 2025</h3>
+                <p class="text-gray-200 text-sm mb-3">Highlights from our national youth summit and future initiatives for leadership growth.</p>
                 <span class="text-green-400 font-semibold hover:underline">Read More →</span>
               </div>
             </div>
           </a>
         </div>
-
         <!-- Slide 4 -->
         <div class="swiper-slide p-4">
-          <a href="/pages/news.html" class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
+          <a href="/pages/news.html" 
+             class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
             <div class="relative">
-              <img src="./images/home/bg2.jpg" alt="news4" class="h-72 w-full object-cover" />
-              <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6">
-                <h3 class="text-2xl font-bold text-white mb-2">Tech Innovation Hackathon</h3>
-                <p class="text-gray-200 text-sm mb-3">
-                  Students collaborated to build tech solutions addressing real-world challenges.
-                </p>
+              <img src="./images/home/bg2.jpg" alt="Youth Summit" class="h-80 w-full object-cover" />
+              <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
+                <h3 class="text-2xl font-bold text-white mb-2">Youth Summit 2025</h3>
+                <p class="text-gray-200 text-sm mb-3">Highlights from our national youth summit and future initiatives for leadership growth.</p>
                 <span class="text-green-400 font-semibold hover:underline">Read More →</span>
               </div>
             </div>
           </a>
         </div>
-
         <!-- Slide 5 -->
         <div class="swiper-slide p-4">
-          <a href="/pages/news.html" class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
+          <a href="/pages/news.html" 
+             class="block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
             <div class="relative">
-              <img src="./images/home/bg.jpg" alt="news5" class="h-72 w-full object-cover" />
-              <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6">
-                <h3 class="text-2xl font-bold text-white mb-2">Cultural Exchange Program</h3>
-                <p class="text-gray-200 text-sm mb-3">
-                  Promoting diversity and unity through cross-cultural student exchange initiatives.
-                </p>
+              <img src="./images/home/bg2.jpg" alt="Youth Summit" class="h-80 w-full object-cover" />
+              <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
+                <h3 class="text-2xl font-bold text-white mb-2">Youth Summit 2025</h3>
+                <p class="text-gray-200 text-sm mb-3">Highlights from our national youth summit and future initiatives for leadership growth.</p>
                 <span class="text-green-400 font-semibold hover:underline">Read More →</span>
               </div>
             </div>
           </a>
         </div>
 
+       
       </div>
 
       <!-- Pagination + Nav -->
       <div class="swiper-pagination !relative mt-6"></div>
-      <div class="swiper-button-prev  !text-green-600 !left-2 !top-1/2 -translate-y-1/2"></div>
-      <div class="swiper-button-next !text-green-600 !right-2 !top-1/2 -translate-y-1/2"></div>
+      <div class="swiper-button-prev !text-green-600 !left-4 !top-1/2 -translate-y-1/2"></div>
+      <div class="swiper-button-next !text-green-600 !right-4 !top-1/2 -translate-y-1/2"></div>
     </div>
   </div>
 </section>
+<!-- *****************************************form************************************ -->
+<section class="relative bg-gray-900 text-white overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="./images/home/bg2.jpg" alt="background" class="w-full h-full object-cover opacity-70">
+  </div>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-green-900/50"></div>
 
-<!-- ***********************************************contact form**************************************** -->
-
-
- <!-- Section -->
-  <section class="relative bg-gray-900 text-white">
-    <!-- Background Image -->
-    <div class="absolute inset-0">
-      <img src="./images/home/bg2.jpg" alt="background" class="w-full h-full object-cover opacity-70">
+  <div class="relative max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Left Text -->
+    <div data-aos="fade-right" class="space-y-6">
+      <p class="text-green-400 font-semibold tracking-wide uppercase">Be a part of FYP</p>
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Join Us Now and <span class="text-green-400">Be the Voice of Change!</span>
+      </h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Step into leadership with the Federal Youth Parliament (FYP). Inspire change, connect with leaders, 
+        and be the force that drives Pakistan toward a brighter future. Your journey starts here!
+      </p>
     </div>
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/50"></div>
 
-    <div class="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-      
-      <!-- Left Text -->
-      <div class="flex flex-col justify-center">
-        <p class="text-green-400 font-semibold mb-2">BE A PART OF FYP</p>
-        <h2 class="text-4xl font-extrabold leading-tight mb-4">
-          Join Us Now and Be the Voice of Change!
-        </h2>
-        <p class="text-gray-200 text-lg">
-          Be a part of the Federal Youth Parliament (FYP) and raise your voice for change.
-          Lead with purpose, inspire your peers, and shape the future of Pakistan.
-          Together, we can build a stronger, united, and empowered youth nation!
-        </p>
-      </div>
-
-      <!-- Right Form -->
-      <div class="bg-green-900/80 p-8 rounded-md shadow-lg">
-        <form action="#" method="POST" class="space-y-4">
-          <input type="text" placeholder="Name" class="w-full px-4 py-3 rounded-md focus:ring-2 focus:ring-green-400 outline-none text-gray-800">
-          <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-md focus:ring-2 focus:ring-green-400 outline-none text-gray-800">
-          <input type="text" placeholder="Subject" class="w-full px-4 py-3 rounded-md focus:ring-2 focus:ring-green-400 outline-none text-gray-800">
-          <textarea placeholder="Type Your Message" rows="4" class="w-full px-4 py-3 rounded-md focus:ring-2 focus:ring-green-400 outline-none text-gray-800"></textarea>
-          <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full">
-            SEND MESSAGE
-          </button>
-        </form>
-      </div>
-
+    <!-- Right Form -->
+    <div data-aos="fade-left" class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl">
+      <form action="#" method="POST" class="space-y-5">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-white/80 text-gray-800 focus:ring-2 focus:ring-green-400 outline-none transition">
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg bg-white/80 text-gray-800 focus:ring-2 focus:ring-green-400 outline-none transition">
+        <input type="text" placeholder="Subject" class="w-full px-4 py-3 rounded-lg bg-white/80 text-gray-800 focus:ring-2 focus:ring-green-400 outline-none transition">
+        <textarea placeholder="Type Your Message" rows="4" class="w-full px-4 py-3 rounded-lg bg-white/80 text-gray-800 focus:ring-2 focus:ring-green-400 outline-none transition"></textarea>
+        <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 rounded-full shadow-lg transition">
+          Send Message
+        </button>
+      </form>
     </div>
-  </section>
+
+  </div>
+</section>
+
+
 
 </main>
 
@@ -571,6 +600,16 @@
 
 
     <script src="scripts/script.js"></script>
+    <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false, 
+        
+  });
+</script>
+
 </body>
 </html>
 
