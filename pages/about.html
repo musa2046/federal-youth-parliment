@@ -6,7 +6,8 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
      <!-- Navbar -->
@@ -142,10 +143,7 @@
           them to become tomorrow’s leaders. Through collaborative efforts, educational programs, 
           and impactful initiatives, we aim to shape a brighter and more inclusive future.
         </p>
-        <a href="/membership"
-          class="bg-green-700 text-white font-semibold rounded-full px-6 py-3 mt-2 hover:bg-green-800 transition w-fit">
-          Learn More
-        </a>
+        
       </div>
       <!-- Image -->
       <img src="../images/home/about-img.jpg" alt="About FYP"
@@ -309,5 +307,15 @@
   </div>
 </footer>
     
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false, 
+        
+  });
+</script>
+
 </body>
 </html>
