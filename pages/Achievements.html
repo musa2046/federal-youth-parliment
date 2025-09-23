@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>achievement</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+         <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+     <!-- Navbar -->
+<nav class="bg-white shadow-md h-16 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Brand -->
+      <a href="/" class="flex items-center">
+        <img src="./images/logo.jpg" alt="Logo" class="h-12 w-12 rounded-full object-cover">
+        <span class="ml-2 font-bold text-green-700 text-lg">Federal Youth Parliament</span>
+      </a>
+
+      <!-- Mobile menu button -->
+      <div class="flex items-center lg:hidden">
+        <button id="mobileMenuBtn" class="text-gray-700 focus:outline-none">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex lg:items-center lg:space-x-6 text-gray-700 font-semibold">
+        <a href="/" class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Home</a>
+
+        <!-- About dropdown -->
+        <div class="relative group">
+          <button class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200 flex items-center gap-1">
+            About
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg rounded py-2 w-48">
+            <a href="/pages/about.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Mission</a>
+            <a href="/pages/constitution.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Constitution</a>
+            <a href="/pages/executive.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Executive Members</a>
+          </div>
+        </div>
+
+        <!-- Programs dropdown -->
+        <div class="relative group">
+          <button class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200 flex items-center gap-1">
+            Programs
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg rounded py-2 w-48">
+            <a href="/pages/achievements.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Achievements</a>
+            <a href="/pages/gallery.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Gallery</a>
+            <a href="/pages/awards.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Awards</a>
+            <a href="/pages/medical-camps.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Medical Camps</a>
+          </div>
+        </div>
+
+        <!-- Membership dropdown -->
+        <div class="relative group">
+          <button class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200 flex items-center gap-1">
+            Membership
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg rounded py-2 w-48">
+            <a href="/pages/membership.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Join</a>
+            <a href="/pages/memberList.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Members List</a>
+          </div>
+        </div>
+
+        <a href="/pages/news.html" class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">News</a>
+        <a href="/pages/contact.html" class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Contact</a>
+
+        <!-- CTA -->
+        <a href="/pages/membership.html"
+           class="ml-4 bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 ">
+          Join Us
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden fixed top-16 left-0 w-full bg-white shadow-md px-4 pt-2 pb-4 space-y-2 text-gray-700 font-semibold z-40">
+    <a href="/" class="block transition transform hover:scale-105 hover:font-bold hover:text-green-700">Home</a>
+
+    <!-- About -->
+    <details class="group">
+      <summary class="cursor-pointer transition transform hover:scale-105 hover:font-bold hover:text-green-700">About</summary>
+      <div class="ml-4 space-y-1">
+        <a href="/pages/about.html" class="block hover:text-green-700 hover:font-bold">Mission</a>
+        <a href="/pages/constitution.html" class="block hover:text-green-700 hover:font-bold">Constitution</a>
+        <a href="/pages/executive.html" class="block hover:text-green-700 hover:font-bold">Executive Members</a>
+      </div>
+    </details>
+
+    <!-- Programs -->
+    <details class="group">
+      <summary class="cursor-pointer transition transform hover:scale-105 hover:font-bold hover:text-green-700">Programs</summary>
+      <div class="ml-4 space-y-1">
+        <a href="/pages/achievements.html" class="block hover:text-green-700 hover:font-bold">Achievements</a>
+        <a href="/pages/gallery.html" class="block hover:text-green-700 hover:font-bold">Gallery</a>
+        <a href="/pages/awards.html" class="block hover:text-green-700 hover:font-bold">Awards</a>
+        <a href="/pages/medical-camps.html" class="block hover:text-green-700 hover:font-bold">Medical Camps</a>
+      </div>
+    </details>
+
+    <!-- Membership -->
+    <details class="group">
+      <summary class="cursor-pointer transition transform hover:scale-105 hover:font-bold hover:text-green-700">Membership</summary>
+      <div class="ml-4 space-y-1">
+        <a href="/pages/membership.html" class="block hover:text-green-700 hover:font-bold">Join</a>
+        <a href="/pages/memberList.html" class="block hover:text-green-700 hover:font-bold">Members List</a>
+      </div>
+    </details>
+
+    <a href="/pages/news.html" class="block hover:text-green-700 hover:font-bold">News</a>
+    <a href="/pages/contact.html" class="block hover:text-green-700 hover:font-bold">Contact</a>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section class="bg-green-100 py-12 text-center">
+    <h1 class="text-4xl font-bold text-green-800">Our Achievements</h1>
+    <p class="mt-3 text-gray-700 max-w-2xl mx-auto">
+      Celebrating the milestones and initiatives of the Federal Youth Parliament in empowering youth across Pakistan.
+    </p>
+  </section>
+
+  <!-- Achievements Content -->
+  <section class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      
+      <!-- Text -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-green-600 inline-block">
+          Achievements
+        </h2>
+        <p class="text-gray-700 leading-relaxed text-justify">
+          Federal Youth Parliament (FYP) has made significant strides in youth empowerment and national 
+          development. FYP has organized 500+ events, conferences, and campaigns, engaging thousands of 
+          young individuals across Pakistan. It has established a presence in all provinces and major 
+          cities, creating a nationwide network of youth leaders.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-4 text-justify">
+          Through its initiatives like the Green Movement, FYP launched plantation drives for sustainability. 
+          The Legal Forum has trained young lawyers through workshops and moot courts, while the Youth Parliament 
+          has promoted democracy and leadership. Women’s Forum has empowered women through education, training, 
+          and career programs.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-4 text-justify">
+          These achievements reflect FYP’s commitment to building an informed, capable, and globally connected 
+          youth community dedicated to sustainable development.
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="flex justify-center md:justify-end">
+        <img src="../images/home/about-img.jpg" alt="Achievements Image" 
+             class="rounded-lg shadow-lg object-cover w-full max-w-md h-[400px]">
+      </div>
+
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 py-12">
+  <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Achievements by Sectors</h2>
+<div class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Medical Camps</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          FYP organised free medical camps providing medicines, equipment, and treatment to more than 2000 patients, ensuring healthcare for the poor and needy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Sports Events</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          FYP launched the Green Movement, planting thousands of trees nationwide to promote sustainability and environmental awareness.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Vocational Training</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          Training programs, workshops, and forums were held to empower youth leaders and strengthen democracy through active participation.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Support of orphans & needy people</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          FYP provided assistance to orphans and needy individuals through various initiatives, ensuring their well-being and support.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Covid-19 relief effect</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          FYP launched the Green Movement, planting thousands of trees nationwide to promote sustainability and environmental awareness.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Campaign against Drug abuse</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          Training programs, workshops, and forums were held to empower youth leaders and strengthen democracy through active participation.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">social Awareness program</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          FYP organised free medical camps providing medicines, equipment, and treatment to more than 2000 patients, ensuring healthcare for the poor and needy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Food and Flour distribution</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          FYP provided food and flour distribution to the needy, ensuring no one goes hungry during tough times.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Education certificate distribution</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          Training programs, workshops, and forums were held to empower youth leaders and strengthen democracy through active participation.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+ 
+<div class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Cleanliness and health awareness</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          FYP organised free medical camps providing medicines, equipment, and treatment to more than 2000 patients, ensuring healthcare for the poor and needy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Arranged aftari for orphans children</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          FYP provided assistance to orphans and needy individuals through various initiatives, ensuring their well-being and support.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Attended lebuk ramazan transition  at avt Khyber</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          Training programs, workshops, and forums were held to empower youth leaders and strengthen democracy through active participation.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">flood activites</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          FYP organised free medical camps providing medicines, equipment, and treatment to more than 2000 patients, ensuring healthcare for the poor and needy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">Fyp worked on water supply and sanitation</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          FYP launched the Green Movement, planting thousands of trees nationwide to promote sustainability and environmental awareness.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+      <img src="../images/home/bg2.jpg" alt="Medical Camp" class="h-48 w-full object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-green-700 mb-2">blood camp by ilyas</h2>
+        <p class="text-gray-700 text-sm leading-relaxed text-justify">
+          Training programs, workshops, and forums were held to empower youth leaders and strengthen democracy through active participation.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Awards Section -->
+<section class="bg-green-50 py-12">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Awards & Recognitions</h2>
+    <p class="text-gray-700 max-w-2xl mx-auto mb-10">
+      Federal Youth Parliament has been honored with various awards for leadership, sustainability,
+      and youth empowerment initiatives.
+    </p>
+
+    <!-- Awards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      
+      <!-- Award Card -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <img src="../images/executives/general-sect2.jpg" alt="Award 1" class="h-48 w-full object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-green-700">National Youth Leadership Award</h3>
+          <p class="text-sm text-gray-600 mt-2">Awarded for outstanding youth leadership programs.</p>
+        </div>
+      </div>
+
+      <!-- Award Card -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <img src="../images/executives/general-sect2.jpg" alt="Award 2" class="h-48 w-full object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-green-700">Sustainability Excellence</h3>
+          <p class="text-sm text-gray-600 mt-2">Recognized for Green Movement plantation drives.</p>
+        </div>
+      </div>
+
+      <!-- Award Card -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <img src="../images/executives/general-sect2.jpg" alt="Award 3" class="h-48 w-full object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-green-700">Global Youth Forum Award</h3>
+          <p class="text-sm text-gray-600 mt-2">Honored for representing Pakistani youth globally.</p>
+        </div>
+      </div>
+
+      <!-- Award Card -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        <img src="../images/executives/general-sect2.jpg" alt="Award 4" class="h-48 w-full object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-green-700">Community Impact Award</h3>
+          <p class="text-sm text-gray-600 mt-2">For medical camps and community outreach programs.</p>
+        </div>
+      </div>
+
+      <!-- Add more award cards as needed -->
+
+    </div>
+  </div>
+  
+</section>
+<!-- ********************************Footer********************************** -->
+<footer class="bg-white text-gray-800 py-12 border-t border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <!-- Quick Links -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4 text-green-600">Quick Links</h2>
+      <ul class="space-y-2 text-gray-600">
+        <li><a href="#" class="hover:text-green-700 transition">Privacy Policy</a></li>
+        <li><a href="/pages/about.html" class="hover:text-green-700 transition">About Us</a></li>
+        <li><a href="/pages/contact.html" class="hover:text-green-700 transition">Contact</a></li>
+        <li><a href="#" class="hover:text-green-700 transition">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Logo + Description -->
+    <div class="text-center">
+      <div class="flex justify-center items-center mb-4">
+        <img src="./images/logo.jpg" alt="Logo" class="w-14 h-14 mr-3 rounded-full shadow-lg border-2 border-green-600">
+        <h2 class="text-2xl font-bold">
+          Federal Youth <span class="text-green-600">PARLIMENT</span>
+        </h2>
+      </div>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Federal Youth Parliament (FYP) empowers young leaders from across Pakistan to engage in policy, leadership, and community development — driving innovation, collaboration, and a brighter future for the nation.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4 text-green-600">Contact</h2>
+      <ul class="space-y-3 text-gray-600 text-sm">
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-location-dot text-green-600"></i>
+          Peshawar, Khyber Pakhtunkhwa, Pakistan
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-phone text-green-600"></i>
+          +92 336 1098720 </li>
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-green-600"></i>
+          federalyouthparlimentpakistan@gmail.com
+        </li>
+      </ul>
+
+      <!-- Social Icons -->
+      <div class="flex gap-4 mt-5">
+        <a href="https://www.facebook.com/share/1726g84KvL/?mibextid=wwXIfr" class="w-10 h-10 flex items-center justify-center rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition"">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        
+        <a href="https://www.instagram.com/federalyouthparliament?igsh=cGUwcnU3cWxmYWEx" class="w-10 h-10 flex items-center justify-center rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition"">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Line -->
+  <div class="mt-10 border-t border-gray-200 pt-4 text-center text-sm text-gray-500">
+    © 2025 <span class="text-green-600 font-semibold">Federal Youth Parliment</span>. 
+    <span class="text-yellow-600">All rights reserved.</span>
+  </div>
+</footer>
+
+
+</body>
+</html>
