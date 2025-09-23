@@ -11,13 +11,13 @@
 </head>
 <body>
      <!-- Navbar -->
-<nav class="bg-white shadow-md sticky top-0 z-50">
+<nav class="bg-white shadow-md h-16 sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16">
       <!-- Brand -->
       <a href="/" class="flex items-center">
         <img src="../images/logo.jpg" alt="Logo" class="h-12 w-12 rounded-full object-cover">
-        <span class="ml-2 font-bold text-green-700 text-lg">Federal Youth Parliment</span>
+        <span class="ml-2 font-bold text-green-700 text-lg">Federal Youth Parliament</span>
       </a>
 
       <!-- Mobile menu button -->
@@ -31,84 +31,110 @@
           </svg>
         </button>
       </div>
-    
+
       <!-- Desktop Menu -->
-<div class="hidden lg:flex lg:items-center lg:space-x-6 text-gray-700 font-semibold">
-  <a href="/" class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Home</a>
+      <div class="hidden lg:flex lg:items-center lg:space-x-6 text-gray-700 font-semibold">
+        <a href="/" class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Home</a>
 
-  <!-- About dropdown -->
-  <div class="relative group">
-    <button class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200 flex items-center gap-1">
-      About
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19 9l-7 7-7-7" />
-      </svg>
-    </button>
-    <div class="absolute hidden group-hover:block bg-white shadow-lg rounded py-2 w-48">
-      <a href="/pages/about.html" class="block px-4 py-2 hover:bg-transparent hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Mission</a>
-      <a href="/pages/constitution.html" class="block px-4 py-2 hover:bg-transparent hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Constitution</a>
-      <a href="/pages/executive.html" class="block px-4 py-2 hover:bg-transparent hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Executive Members</a>
+        <!-- About dropdown -->
+        <div class="relative group">
+          <button class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200 flex items-center gap-1">
+            About
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg rounded py-2 w-48">
+            <a href="/pages/about.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Mission</a>
+            <a href="/pages/constitution.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Constitution</a>
+            <a href="/pages/executive.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Executive Members</a>
+          </div>
+        </div>
+
+        <!-- Programs dropdown -->
+        <div class="relative group">
+          <button class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200 flex items-center gap-1">
+            Programs
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg rounded py-2 w-48">
+            <a href="/pages/achievements.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Achievements</a>
+            <a href="/pages/gallery.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Gallery</a>
+            <a href="/pages/awards.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Awards</a>
+            <a href="/pages/medical-camps.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Medical Camps</a>
+          </div>
+        </div>
+
+        <!-- Membership dropdown -->
+        <div class="relative group">
+          <button class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200 flex items-center gap-1">
+            Membership
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg rounded py-2 w-48">
+            <a href="/pages/membership.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Join</a>
+            <a href="/pages/memberList.html" class="block px-4 py-2 hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Members List</a>
+          </div>
+        </div>
+
+        <a href="/pages/news.html" class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">News</a>
+        <a href="/pages/contact.html" class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Contact</a>
+
+        <!-- CTA -->
+        <a href="/pages/membership.html"
+           class="ml-4 bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 ">
+          Join Us
+        </a>
+      </div>
     </div>
   </div>
 
-  <a href="/pages/programs.html" class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Programs</a>
-
-  <!-- Membership dropdown -->
-  <div class="relative group">
-    <button class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200 flex items-center gap-1">
-      Membership
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19 9l-7 7-7-7" />
-      </svg>
-    </button>
-    <div class="absolute hidden group-hover:block bg-white shadow-lg rounded py-2 w-48">
-      <a href="/pages/membership.html" class="block px-4 py-2 hover:bg-transparent hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Join</a>
-      <a href="/pages/memberList.html" class="block px-4 py-2 hover:bg-transparent hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Members List</a>
-    </div>
-  </div>
-
-  <a href="/pages/news.html" class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">News</a>
-  <a href="/pages/contact.html" class="hover:text-green-700 hover:scale-110 hover:font-bold transition transform duration-200">Contact</a>
-
-  <!-- CTA -->
-  <a href="/pages/membership.html"
-     class="ml-4 bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 hover:scale-110 transition transform duration-200">
-    Join Us
-  </a>
-</div>
-
-
-  <!-- Mobile Menu (hidden by default) -->
+  <!-- Mobile Menu -->
   <div id="mobileMenu" class="hidden fixed top-16 left-0 w-full bg-white shadow-md px-4 pt-2 pb-4 space-y-2 text-gray-700 font-semibold z-40">
     <a href="/" class="block transition transform hover:scale-105 hover:font-bold hover:text-green-700">Home</a>
 
+    <!-- About -->
     <details class="group">
       <summary class="cursor-pointer transition transform hover:scale-105 hover:font-bold hover:text-green-700">About</summary>
       <div class="ml-4 space-y-1">
-        <a href="/pages/about.html" class="block transition transform hover:scale-105 hover:font-bold hover:text-green-700">Mission</a>
-        <a href="/pages/constitution.html" class="block transition transform hover:scale-105 hover:font-bold hover:text-green-700">Constitution</a>
-        <a href="/pages/executive.html" class="block transition transform hover:scale-105 hover:font-bold hover:text-green-700">Executive Members</a>
+        <a href="/pages/about.html" class="block hover:text-green-700 hover:font-bold">Mission</a>
+        <a href="/pages/constitution.html" class="block hover:text-green-700 hover:font-bold">Constitution</a>
+        <a href="/pages/executive.html" class="block hover:text-green-700 hover:font-bold">Executive Members</a>
       </div>
     </details>
 
-    <a href="/pages/programs.html" class="block transition transform hover:scale-105 hover:font-bold hover:text-green-700">Programs</a>
+    <!-- Programs -->
+    <details class="group">
+      <summary class="cursor-pointer transition transform hover:scale-105 hover:font-bold hover:text-green-700">Programs</summary>
+      <div class="ml-4 space-y-1">
+        <a href="/pages/achievements.html" class="block hover:text-green-700 hover:font-bold">Achievements</a>
+        <a href="/pages/gallery.html" class="block hover:text-green-700 hover:font-bold">Gallery</a>
+        <a href="/pages/awards.html" class="block hover:text-green-700 hover:font-bold">Awards</a>
+        <a href="/pages/medical-camps.html" class="block hover:text-green-700 hover:font-bold">Medical Camps</a>
+      </div>
+    </details>
 
+    <!-- Membership -->
     <details class="group">
       <summary class="cursor-pointer transition transform hover:scale-105 hover:font-bold hover:text-green-700">Membership</summary>
       <div class="ml-4 space-y-1">
-        <a href="/pages/membership.html" class="block transition transform hover:scale-105 hover:font-bold hover:text-green-700">Join</a>
-        <a href="/pages/memberList.html" class="block transition transform hover:scale-105 hover:font-bold hover:text-green-700">Members List</a>
+        <a href="/pages/membership.html" class="block hover:text-green-700 hover:font-bold">Join</a>
+        <a href="/pages/memberList.html" class="block hover:text-green-700 hover:font-bold">Members List</a>
       </div>
     </details>
 
-    <a href="/pages/news.html" class="block transition transform hover:scale-105 hover:font-bold hover:text-green-700">News</a>
-    <a href="/pages/contact.html" class="block transition transform hover:scale-105 hover:font-bold hover:text-green-700">Contact</a>
-
-   
+    <a href="/pages/news.html" class="block hover:text-green-700 hover:font-bold">News</a>
+    <a href="/pages/contact.html" class="block hover:text-green-700 hover:font-bold">Contact</a>
   </div>
 </nav>
+
 <main>
 
  <main>
