@@ -108,117 +108,172 @@
    
   </div>
 </nav>
-    <main>  
-        <section class="px-6 py-10 bg-gray-50">
-  <h2 class="text-2xl font-bold text-center text-green-700 mb-6">
-    Youth Parliament Members
-  </h2>
+    <main>
+  <section class="px-6 py-12 bg-gray-50">
+    <!-- Heading -->
+    <h2 class="text-3xl font-bold text-center text-green-700 mb-8">
+      Youth Parliament Members
+    </h2>
 
-  <div class="overflow-x-auto shadow-lg rounded-xl border border-gray-200">
-    <table class="min-w-full bg-white">
-      <!-- Table Head -->
-      <thead class="bg-green-600 text-white">
-        <tr>
-          <th class="py-3 px-4 text-left text-sm font-semibold">#</th>
-          <th class="py-3 px-4 text-left text-sm font-semibold">Name</th>
-          <th class="py-3 px-4 text-left text-sm font-semibold">Designation</th>
-          <th class="py-3 px-4 text-left text-sm font-semibold">Qualification</th>
-          <th class="py-3 px-4 text-left text-sm font-semibold">Email</th>
-        </tr>
-      </thead>
+    <!-- Search Bar -->
+   <div class="flex flex-col md:flex-row items-center justify-center mb-8 gap-4">
+  <!-- Input -->
+  <input 
+    type="text" 
+    placeholder="Search members by CNIC" 
+    class="w-full md:w-96 px-4 py-3 rounded-lg border border-gray-300 shadow-sm 
+           focus:ring-2 focus:ring-green-500 focus:outline-none"
+  />
 
-      <!-- Table Body -->
-      <tbody class="divide-y divide-gray-200">
-        <!-- Row Example -->
-        <tr class="hover:bg-green-50 transition">
-          <td class="py-3 px-4 text-sm text-gray-600">1</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Musa Bukhari</td>
-          <td class="py-3 px-4 text-gray-600">President</td>
-          <td class="py-3 px-4 text-gray-600">BS Computer Science</td>
-          <td class="py-3 px-4 text-blue-600 underline">musa@example.com</td>
-        </tr>
+  <!-- Button -->
+  <button 
+    class="px-6 py-3 bg-green-600 text-white font-medium rounded-lg 
+           hover:bg-green-700 transition shadow-md"
+  >
+    Search
+  </button>
+</div>
 
-        <tr class="hover:bg-green-50 transition">
-          <td class="py-3 px-4 text-sm text-gray-600">2</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Ali Khan</td>
-          <td class="py-3 px-4 text-gray-600">Vice President</td>
-          <td class="py-3 px-4 text-gray-600">MBA</td>
-          <td class="py-3 px-4 text-blue-600 underline">ali.khan@example.com</td>
-        </tr>
+    <!-- Table Container -->
+    <div class="overflow-x-auto shadow-xl rounded-2xl border border-gray-200 bg-white">
+      <table class="min-w-full text-sm text-gray-700">
+        <!-- Table Head -->
+        <thead class="bg-green-600 text-white">
+          <tr>
+            <th class="py-3 px-4 text-left font-semibold">#</th>
+            <th class="py-3 px-4 text-left font-semibold">Picture</th>
+            <th class="py-3 px-4 text-left font-semibold">Name</th>
+            <th class="py-3 px-4 text-left font-semibold">Father’s Name</th>
+            <th class="py-3 px-4 text-left font-semibold">District</th>
+            <th class="py-3 px-4 text-left font-semibold">PK</th>
+            <th class="py-3 px-4 text-left font-semibold">Email</th>
+          </tr>
+        </thead>
 
-        <tr class="hover:bg-green-50 transition">
-          <td class="py-3 px-4 text-sm text-gray-600">3</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Ayesha Ahmed</td>
-          <td class="py-3 px-4 text-gray-600">General Secretary</td>
-          <td class="py-3 px-4 text-gray-600">LLB</td>
-          <td class="py-3 px-4 text-blue-600 underline">ayesha@example.com</td>
-        </tr>
+        <!-- Table Body -->
+        <tbody class="divide-y divide-gray-200">
+          <!-- Row Example -->
+          <tr class="hover:bg-green-50 transition">
+            <td class="py-3 px-4">1</td>
+            <td class="py-3 px-4">
+              <img src="../images/members/member1.jpg" alt="Musa Bukhari" class="w-16 h-16 rounded-full object-cover shadow-md">
+            </td>
+            <td class="py-3 px-4 font-medium text-gray-900">Musa Bukhari</td>
+            <td class="py-3 px-4 text-gray-600">Ahmed Bukhari</td>
+            <td class="py-3 px-4 text-gray-600">Bannu</td>
+            <td class="py-3 px-4 font-semibold text-green-700">PK-88</td>
+            <td class="py-3 px-4 text-blue-600 underline">musa@example.com</td>
+          </tr>
 
-        <tr class="hover:bg-green-50 transition">
-          <td class="py-3 px-4 text-sm text-gray-600">4</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Bilal Hussain</td>
-          <td class="py-3 px-4 text-gray-600">Finance Secretary</td>
-          <td class="py-3 px-4 text-gray-600">B.Com</td>
-          <td class="py-3 px-4 text-blue-600 underline">bilal@example.com</td>
-        </tr>
+          <tr class="hover:bg-green-50 transition">
+            <td class="py-3 px-4">2</td>
+            <td class="py-3 px-4">
+              <img src="../images/members/member2.jpg" alt="Ali Khan" class="w-16 h-16 rounded-full object-cover shadow-md">
+            </td>
+            <td class="py-3 px-4 font-medium text-gray-900">Ali Khan</td>
+            <td class="py-3 px-4 text-gray-600">Zafar Khan</td>
+            <td class="py-3 px-4 text-gray-600">Peshawar</td>
+            <td class="py-3 px-4 font-semibold text-green-700">PK-72</td>
+            <td class="py-3 px-4 text-blue-600 underline">ali.khan@example.com</td>
+          </tr>
 
-        <tr class="hover:bg-green-50 transition">
-          <td class="py-3 px-4 text-sm text-gray-600">5</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Fatima Noor</td>
-          <td class="py-3 px-4 text-gray-600">Education Secretary</td>
-          <td class="py-3 px-4 text-gray-600">M.Ed</td>
-          <td class="py-3 px-4 text-blue-600 underline">fatima@example.com</td>
-        </tr>
+          <tr class="hover:bg-green-50 transition">
+            <td class="py-3 px-4">3</td>
+            <td class="py-3 px-4">
+              <img src="../images/members/member3.jpg" alt="Ayesha Ahmed" class="w-16 h-16 rounded-full object-cover shadow-md">
+            </td>
+            <td class="py-3 px-4 font-medium text-gray-900">uzair Aijaz</td>
+            <td class="py-3 px-4 text-gray-600">Aijaz Qureshi</td>
+            <td class="py-3 px-4 text-gray-600">Mansehra</td>
+            <td class="py-3 px-4 font-semibold text-green-700">PK-74</td>
+            <td class="py-3 px-4 text-blue-600 underline">uzair@example.com</td>
+          </tr>
+          <tr class="hover:bg-green-50 transition">
+            <td class="py-3 px-4">4</td>
+            <td class="py-3 px-4">
+              <img src="../images/members/member4.jpg" alt="Ayesha Ahmed" class="w-16 h-16 rounded-full object-cover shadow-md">
+            </td>
+            <td class="py-3 px-4 font-medium text-gray-900">Ayesha Ahmed</td>
+            <td class="py-3 px-4 text-gray-600">Tariq Ahmed</td>
+            <td class="py-3 px-4 text-gray-600">Abbottabad</td>
+            <td class="py-3 px-4 font-semibold text-green-700">PK-64</td>
+            <td class="py-3 px-4 text-blue-600 underline">ayesha@example.com</td>
+          </tr>
+          <tr class="hover:bg-green-50 transition">
+            <td class="py-3 px-4">5</td>
+            <td class="py-3 px-4">
+              <img src="../images/members/member5.jpg" alt="Amna Rouf" class="w-16 h-16 rounded-full object-cover shadow-md">
+            </td>
+            <td class="py-3 px-4 font-medium text-gray-900">Amna Rouf</td>
+            <td class="py-3 px-4 text-gray-600">Ruf Alam</td>
+            <td class="py-3 px-4 text-gray-600">Abbottabad</td>
+            <td class="py-3 px-4 font-semibold text-green-700">PK-64</td>
+            <td class="py-3 px-4 text-blue-600 underline">amna@example.com</td>
+          </tr>
+          <tr class="hover:bg-green-50 transition">
+            <td class="py-3 px-4">6</td>
+            <td class="py-3 px-4">
+              <img src="../images/members/member1.jpg" alt="Musa Bukhari" class="w-16 h-16 rounded-full object-cover shadow-md">
+            </td>
+            <td class="py-3 px-4 font-medium text-gray-900">Musa Bukhari</td>
+            <td class="py-3 px-4 text-gray-600">Ahmed Bukhari</td>
+            <td class="py-3 px-4 text-gray-600">Bannu</td>
+            <td class="py-3 px-4 font-semibold text-green-700">PK-88</td>
+            <td class="py-3 px-4 text-blue-600 underline">musa@example.com</td>
+          </tr>
 
-        <!-- Dummy rows until 20 -->
-        <tr class="hover:bg-green-50 transition">
-          <td class="py-3 px-4 text-sm text-gray-600">6</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Imran Shah</td>
-          <td class="py-3 px-4 text-gray-600">Cultural Secretary</td>
-          <td class="py-3 px-4 text-gray-600">BA Arts</td>
-          <td class="py-3 px-4 text-blue-600 underline">imran@example.com</td>
-        </tr>
+          <tr class="hover:bg-green-50 transition">
+            <td class="py-3 px-4">7</td>
+            <td class="py-3 px-4">
+              <img src="../images/members/member2.jpg" alt="Ali Khan" class="w-16 h-16 rounded-full object-cover shadow-md">
+            </td>
+            <td class="py-3 px-4 font-medium text-gray-900">Ali Khan</td>
+            <td class="py-3 px-4 text-gray-600">Zafar Khan</td>
+            <td class="py-3 px-4 text-gray-600">Peshawar</td>
+            <td class="py-3 px-4 font-semibold text-green-700">PK-72</td>
+            <td class="py-3 px-4 text-blue-600 underline">ali.khan@example.com</td>
+          </tr>
 
-        <tr class="hover:bg-green-50 transition">
-          <td class="py-3 px-4 text-sm text-gray-600">7</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Sara Malik</td>
-          <td class="py-3 px-4 text-gray-600">Youth Coordinator</td>
-          <td class="py-3 px-4 text-gray-600">BS Sociology</td>
-          <td class="py-3 px-4 text-blue-600 underline">sara@example.com</td>
-        </tr>
+          <tr class="hover:bg-green-50 transition">
+            <td class="py-3 px-4">8</td>
+            <td class="py-3 px-4">
+              <img src="../images/members/member3.jpg" alt="Ayesha Ahmed" class="w-16 h-16 rounded-full object-cover shadow-md">
+            </td>
+            <td class="py-3 px-4 font-medium text-gray-900">uzair Aijaz</td>
+            <td class="py-3 px-4 text-gray-600">Aijaz Qureshi</td>
+            <td class="py-3 px-4 text-gray-600">Mansehra</td>
+            <td class="py-3 px-4 font-semibold text-green-700">PK-74</td>
+            <td class="py-3 px-4 text-blue-600 underline">uzair@example.com</td>
+          </tr>
+          <tr class="hover:bg-green-50 transition">
+            <td class="py-3 px-4">9</td>
+            <td class="py-3 px-4">
+              <img src="../images/members/member4.jpg" alt="Ayesha Ahmed" class="w-16 h-16 rounded-full object-cover shadow-md">
+            </td>
+            <td class="py-3 px-4 font-medium text-gray-900">Ayesha Ahmed</td>
+            <td class="py-3 px-4 text-gray-600">Tariq Ahmed</td>
+            <td class="py-3 px-4 text-gray-600">Abbottabad</td>
+            <td class="py-3 px-4 font-semibold text-green-700">PK-64</td>
+            <td class="py-3 px-4 text-blue-600 underline">ayesha@example.com</td>
+          </tr>
+          <tr class="hover:bg-green-50 transition">
+            <td class="py-3 px-4">10</td>
+            <td class="py-3 px-4">
+              <img src="../images/members/member5.jpg" alt="Amna Rouf" class="w-16 h-16 rounded-full object-cover shadow-md">
+            </td>
+            <td class="py-3 px-4 font-medium text-gray-900">Amna Rouf</td>
+            <td class="py-3 px-4 text-gray-600">Ruf Alam</td>
+            <td class="py-3 px-4 text-gray-600">Abbottabad</td>
+            <td class="py-3 px-4 font-semibold text-green-700">PK-64</td>
+            <td class="py-3 px-4 text-blue-600 underline">amna@example.com</td>
+          </tr>
 
-        <tr class="hover:bg-green-50 transition">
-          <td class="py-3 px-4 text-sm text-gray-600">8</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Hamza Rauf</td>
-          <td class="py-3 px-4 text-gray-600">Media Secretary</td>
-          <td class="py-3 px-4 text-gray-600">BS Mass Communication</td>
-          <td class="py-3 px-4 text-blue-600 underline">hamza@example.com</td>
-        </tr>
-
-        <tr class="hover:bg-green-50 transition">
-          <td class="py-3 px-4 text-sm text-gray-600">9</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Hina Tariq</td>
-          <td class="py-3 px-4 text-gray-600">Women Representative</td>
-          <td class="py-3 px-4 text-gray-600">MSc Psychology</td>
-          <td class="py-3 px-4 text-blue-600 underline">hina@example.com</td>
-        </tr>
-
-        <tr class="hover:bg-green-50 transition">
-          <td class="py-3 px-4 text-sm text-gray-600">10</td>
-          <td class="py-3 px-4 font-medium text-gray-800">Usman Khalid</td>
-          <td class="py-3 px-4 text-gray-600">Health Secretary</td>
-          <td class="py-3 px-4 text-gray-600">MBBS</td>
-          <td class="py-3 px-4 text-blue-600 underline">usman@example.com</td>
-        </tr>
-
-        <!-- Continue similarly until 20 rows -->
-      </tbody>
-    </table>
-  </div>
-</section>
-
-    </main>
-
+          <!-- Continue rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
 
 <!-- ********************************Footer********************************** -->
 <footer class="bg-white text-gray-800 py-12 border-t border-gray-200">
@@ -280,6 +335,7 @@
 
   </div>
 
+     <p class="text-center text-gray-500 my-4 font-bold flex gap-2 justify-center items-center">Developed By <img src="../images/cc-logo.png" alt="logo" class="h-12 rounded-full object-cover flex items-center"> <span class="text-yellow-400">Code</span><span class="text-blue-400">Club</span> </p>
   <!-- Bottom Line -->
   <div class="mt-10 border-t border-gray-200 pt-4 text-center text-sm text-gray-500">
     © 2025 <span class="text-green-600 font-semibold">Federal Youth Parliment</span>. 
