@@ -141,8 +141,7 @@
     <a href="/pages/contact.html" class="block hover:text-green-700 hover:font-bold">Contact</a>
   </div>
 </nav>
-
-    <main>
+<main>
   <section class="px-6 py-12 bg-gray-50">
     <!-- Heading -->
     <h2 class="text-3xl font-bold text-center text-green-700 mb-8">
@@ -150,28 +149,29 @@
     </h2>
 
     <!-- Search Bar -->
-   <div class="flex flex-col md:flex-row items-center justify-center mb-8 gap-4">
-  <!-- Input -->
-  <input 
-    id="searchInput"
-    type="text" 
-    placeholder="Search members by CNIC" 
-    class="w-full md:w-96 px-4 py-3 rounded-lg border border-gray-300 shadow-sm 
-           focus:ring-2 focus:ring-green-500 focus:outline-none"
-  />
+    <div class="flex flex-col md:flex-row items-center justify-center mb-8 gap-4">
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search members by CNIC, name or PK..."
+        aria-label="Search members"
+        class="w-full md:w-96 px-4 py-3 rounded-lg border border-gray-300 shadow-sm
+               focus:ring-2 focus:ring-green-500 focus:outline-none"
+      />
 
-  <!-- Button -->
-  <button 
-    class="px-6 py-3 bg-green-600 text-white font-medium rounded-lg 
-           hover:bg-green-700 transition shadow-md"
-  >
-    Search
-  </button>
-</div>
+      <button
+        id="clearBtn"
+        class="px-6 py-3 bg-green-600 text-white font-medium rounded-lg
+               hover:bg-green-700 transition shadow-md"
+        type="button"
+      >
+        Clear
+      </button>
+    </div>
 
     <!-- Table Container -->
     <div class="overflow-x-auto shadow-xl rounded-2xl border border-gray-200 bg-white">
-      <table id="memberTable" class="min-w-full text-sm text-gray-700">
+      <table class="min-w-full text-sm text-gray-700" id="membersTable">
         <!-- Table Head -->
         <thead class="bg-green-600 text-white">
           <tr>
@@ -181,22 +181,24 @@
             <th class="py-3 px-4 text-left font-semibold">Father’s Name</th>
             <th class="py-3 px-4 text-left font-semibold">District</th>
             <th class="py-3 px-4 text-left font-semibold">PK</th>
+            <th class="py-3 px-4 text-left font-semibold">CNIC</th>
             <th class="py-3 px-4 text-left font-semibold">Email</th>
           </tr>
         </thead>
 
         <!-- Table Body -->
-        <tbody class="divide-y divide-gray-200">
-          <!-- Row Example -->
+        <tbody id="membersTbody" class="divide-y divide-gray-200">
+          <!-- example rows -->
           <tr class="hover:bg-green-50 transition">
             <td class="py-3 px-4">1</td>
             <td class="py-3 px-4">
               <img src="../images/members/member1.jpg" alt="Musa Bukhari" class="w-16 h-16 rounded-full object-cover shadow-md">
             </td>
-            <td class="py-3 px-4 font-medium text-gray-900">Musa Bukhari</td>
-            <td class="py-3 px-4 text-gray-600">Ahmed Bukhari</td>
-            <td class="py-3 px-4 text-gray-600">Bannu</td>
-            <td class="py-3 px-4 font-semibold text-green-700">PK-88</td>
+            <td class="py-3 px-4 cell-name font-medium text-gray-900">Musa Bukhari</td>
+            <td class="py-3 px-4">Ahmed Bukhari</td>
+            <td class="py-3 px-4">Bannu</td>
+            <td class="py-3 px-4 cell-pk font-semibold text-green-700">PK-88</td>
+            <td class="py-3 px-4 cell-cnic">12345-1234567-1</td>
             <td class="py-3 px-4 text-blue-600 underline">musa@example.com</td>
           </tr>
 
@@ -205,105 +207,119 @@
             <td class="py-3 px-4">
               <img src="../images/members/member2.jpg" alt="Ali Khan" class="w-16 h-16 rounded-full object-cover shadow-md">
             </td>
-            <td class="py-3 px-4 font-medium text-gray-900">Ali Khan</td>
-            <td class="py-3 px-4 text-gray-600">Zafar Khan</td>
-            <td class="py-3 px-4 text-gray-600">Peshawar</td>
-            <td class="py-3 px-4 font-semibold text-green-700">PK-72</td>
+            <td class="py-3 px-4 cell-name font-medium text-gray-900">Ali Khan</td>
+            <td class="py-3 px-4">Zafar Khan</td>
+            <td class="py-3 px-4">Peshawar</td>
+            <td class="py-3 px-4 cell-pk font-semibold text-green-700">PK-72</td>
+            <td class="py-3 px-4 cell-cnic">54321-7654321-0</td>
             <td class="py-3 px-4 text-blue-600 underline">ali.khan@example.com</td>
           </tr>
 
           <tr class="hover:bg-green-50 transition">
             <td class="py-3 px-4">3</td>
             <td class="py-3 px-4">
-              <img src="../images/members/member3.jpg" alt="Ayesha Ahmed" class="w-16 h-16 rounded-full object-cover shadow-md">
+              <img src="../images/members/member3.jpg" alt="Uzair Aijaz" class="w-16 h-16 rounded-full object-cover shadow-md">
             </td>
-            <td class="py-3 px-4 font-medium text-gray-900">uzair Aijaz</td>
-            <td class="py-3 px-4 text-gray-600">Aijaz Qureshi</td>
-            <td class="py-3 px-4 text-gray-600">Mansehra</td>
-            <td class="py-3 px-4 font-semibold text-green-700">PK-74</td>
+            <td class="py-3 px-4 cell-name font-medium text-gray-900">Uzair Aijaz</td>
+            <td class="py-3 px-4">Aijaz Qureshi</td>
+            <td class="py-3 px-4">Mansehra</td>
+            <td class="py-3 px-4 cell-pk font-semibold text-green-700">PK-74</td>
+            <td class="py-3 px-4 cell-cnic">98765-4321098-7</td>
             <td class="py-3 px-4 text-blue-600 underline">uzair@example.com</td>
           </tr>
           <tr class="hover:bg-green-50 transition">
             <td class="py-3 px-4">4</td>
             <td class="py-3 px-4">
-              <img src="../images/members/member4.jpg" alt="Ayesha Ahmed" class="w-16 h-16 rounded-full object-cover shadow-md">
+              <img src="../images/members/member4.jpg" alt="Ihtesham" class="w-16 h-16 rounded-full object-cover shadow-md">
             </td>
-            <td class="py-3 px-4 font-medium text-gray-900">Ayesha Ahmed</td>
-            <td class="py-3 px-4 text-gray-600">Tariq Ahmed</td>
-            <td class="py-3 px-4 text-gray-600">Abbottabad</td>
-            <td class="py-3 px-4 font-semibold text-green-700">PK-64</td>
-            <td class="py-3 px-4 text-blue-600 underline">ayesha@example.com</td>
+            <td class="py-3 px-4 cell-name font-medium text-gray-900">Ihtesham</td>
+            <td class="py-3 px-4">Aijaz Qureshi</td>
+            <td class="py-3 px-4">Mansehra</td>
+            <td class="py-3 px-4 cell-pk font-semibold text-green-700">PK-74</td>
+            <td class="py-3 px-4 cell-cnic">98765-4321098-7</td>
+            <td class="py-3 px-4 text-blue-600 underline">uzair@example.com</td>
           </tr>
           <tr class="hover:bg-green-50 transition">
             <td class="py-3 px-4">5</td>
             <td class="py-3 px-4">
-              <img src="../images/members/member5.jpg" alt="Amna Rouf" class="w-16 h-16 rounded-full object-cover shadow-md">
+              <img src="../images/members/member5.jpg" alt="Hasnain" class="w-16 h-16 rounded-full object-cover shadow-md">
             </td>
-            <td class="py-3 px-4 font-medium text-gray-900">Amna Rouf</td>
-            <td class="py-3 px-4 text-gray-600">Ruf Alam</td>
-            <td class="py-3 px-4 text-gray-600">Abbottabad</td>
-            <td class="py-3 px-4 font-semibold text-green-700">PK-64</td>
-            <td class="py-3 px-4 text-blue-600 underline">amna@example.com</td>
+            <td class="py-3 px-4 cell-name font-medium text-gray-900">Hasnain</td>
+            <td class="py-3 px-4">Aijaz Qureshi</td>
+            <td class="py-3 px-4">Mansehra</td>
+            <td class="py-3 px-4 cell-pk font-semibold text-green-700">PK-74</td>
+            <td class="py-3 px-4 cell-cnic">932365-4321098-7</td>
+            <td class="py-3 px-4 text-blue-600 underline">uzair@example.com</td>
           </tr>
           <tr class="hover:bg-green-50 transition">
             <td class="py-3 px-4">6</td>
             <td class="py-3 px-4">
-              <img src="../images/members/member1.jpg" alt="Musa Bukhari" class="w-16 h-16 rounded-full object-cover shadow-md">
+              <img src="../images/members/member1.jpg" alt="Uzair Aijaz" class="w-16 h-16 rounded-full object-cover shadow-md">
             </td>
-            <td class="py-3 px-4 font-medium text-gray-900">Musa Bukhari</td>
-            <td class="py-3 px-4 text-gray-600">Ahmed Bukhari</td>
-            <td class="py-3 px-4 text-gray-600">Bannu</td>
-            <td class="py-3 px-4 font-semibold text-green-700">PK-88</td>
-            <td class="py-3 px-4 text-blue-600 underline">musa@example.com</td>
+            <td class="py-3 px-4 cell-name font-medium text-gray-900">Umar</td>
+            <td class="py-3 px-4">Aijaz Qureshi</td>
+            <td class="py-3 px-4">Mansehra</td>
+            <td class="py-3 px-4 cell-pk font-semibold text-green-700">PK-74</td>
+            <td class="py-3 px-4 cell-cnic">54365-4321098-7</td>
+            <td class="py-3 px-4 text-blue-600 underline">uzair@example.com</td>
           </tr>
-
           <tr class="hover:bg-green-50 transition">
             <td class="py-3 px-4">7</td>
             <td class="py-3 px-4">
-              <img src="../images/members/member2.jpg" alt="Ali Khan" class="w-16 h-16 rounded-full object-cover shadow-md">
+              <img src="../images/members/member2.jpg" alt="Uzair Aijaz" class="w-16 h-16 rounded-full object-cover shadow-md">
             </td>
-            <td class="py-3 px-4 font-medium text-gray-900">Ali Khan</td>
-            <td class="py-3 px-4 text-gray-600">Zafar Khan</td>
-            <td class="py-3 px-4 text-gray-600">Peshawar</td>
-            <td class="py-3 px-4 font-semibold text-green-700">PK-72</td>
-            <td class="py-3 px-4 text-blue-600 underline">ali.khan@example.com</td>
+            <td class="py-3 px-4 cell-name font-medium text-gray-900">Affan</td>
+            <td class="py-3 px-4">Aijaz Qureshi</td>
+            <td class="py-3 px-4">Mansehra</td>
+            <td class="py-3 px-4 cell-pk font-semibold text-green-700">PK-67</td>
+            <td class="py-3 px-4 cell-cnic">085735-4321098-7</td>
+            <td class="py-3 px-4 text-blue-600 underline">uzair@example.com</td>
           </tr>
-
           <tr class="hover:bg-green-50 transition">
             <td class="py-3 px-4">8</td>
             <td class="py-3 px-4">
-              <img src="../images/members/member3.jpg" alt="Ayesha Ahmed" class="w-16 h-16 rounded-full object-cover shadow-md">
+              <img src="../images/members/member3.jpg" alt="Uzair Aijaz" class="w-16 h-16 rounded-full object-cover shadow-md">
             </td>
-            <td class="py-3 px-4 font-medium text-gray-900">uzair Aijaz</td>
-            <td class="py-3 px-4 text-gray-600">Aijaz Qureshi</td>
-            <td class="py-3 px-4 text-gray-600">Mansehra</td>
-            <td class="py-3 px-4 font-semibold text-green-700">PK-74</td>
+            <td class="py-3 px-4 cell-name font-medium text-gray-900">Abdullah</td>
+            <td class="py-3 px-4">Aijaz Qureshi</td>
+            <td class="py-3 px-4">Mansehra</td>
+            <td class="py-3 px-4 cell-pk font-semibold text-green-700">PK-54</td>
+            <td class="py-3 px-4 cell-cnic">98765-2381098-7</td>
             <td class="py-3 px-4 text-blue-600 underline">uzair@example.com</td>
           </tr>
           <tr class="hover:bg-green-50 transition">
             <td class="py-3 px-4">9</td>
             <td class="py-3 px-4">
-              <img src="../images/members/member4.jpg" alt="Ayesha Ahmed" class="w-16 h-16 rounded-full object-cover shadow-md">
+              <img src="../images/members/member4.jpg" alt="Uzair Aijaz" class="w-16 h-16 rounded-full object-cover shadow-md">
             </td>
-            <td class="py-3 px-4 font-medium text-gray-900">Ayesha Ahmed</td>
-            <td class="py-3 px-4 text-gray-600">Tariq Ahmed</td>
-            <td class="py-3 px-4 text-gray-600">Abbottabad</td>
-            <td class="py-3 px-4 font-semibold text-green-700">PK-64</td>
-            <td class="py-3 px-4 text-blue-600 underline">ayesha@example.com</td>
+            <td class="py-3 px-4 cell-name font-medium text-gray-900">Mazhar</td>
+            <td class="py-3 px-4">Aijaz Qureshi</td>
+            <td class="py-3 px-4">Mansehra</td>
+            <td class="py-3 px-4 cell-pk font-semibold text-green-700">PK-64</td>
+            <td class="py-3 px-4 cell-cnic">93425-4321098-7</td>
+            <td class="py-3 px-4 text-blue-600 underline">uzair@example.com</td>
           </tr>
           <tr class="hover:bg-green-50 transition">
             <td class="py-3 px-4">10</td>
             <td class="py-3 px-4">
-              <img src="../images/members/member5.jpg" alt="Amna Rouf" class="w-16 h-16 rounded-full object-cover shadow-md">
+              <img src="../images/members/member5.jpg" alt="Uzair Aijaz" class="w-16 h-16 rounded-full object-cover shadow-md">
             </td>
-            <td class="py-3 px-4 font-medium text-gray-900">Amna Rouf</td>
-            <td class="py-3 px-4 text-gray-600">Ruf Alam</td>
-            <td class="py-3 px-4 text-gray-600">Abbottabad</td>
-            <td class="py-3 px-4 font-semibold text-green-700">PK-64</td>
-            <td class="py-3 px-4 text-blue-600 underline">amna@example.com</td>
+            <td class="py-3 px-4 cell-name font-medium text-gray-900">Zaigham</td>
+            <td class="py-3 px-4">Zaigham </td>
+            <td class="py-3 px-4">Balakot</td>
+            <td class="py-3 px-4 cell-pk font-semibold text-green-700">PK-74</td>
+            <td class="py-3 px-4 cell-cnic">87665-4321098-7</td>
+            <td class="py-3 px-4 text-blue-600 underline">uzair@example.com</td>
           </tr>
 
-          <!-- Continue rows as needed -->
+          <!-- add more rows... -->
+
+          <!-- "no results" row (hidden by default) -->
+          <tr id="noResultsRow" class="hidden">
+            <td colspan="8" class="py-8 text-center text-gray-500">
+              No members match your search.
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -377,5 +393,65 @@
     <span class="text-yellow-600">All rights reserved.</span>
   </div>
 </footer>
+
+<script>
+  (function () {
+    const input = document.getElementById('searchInput');
+    const tbody = document.getElementById('membersTbody');
+    const rows = Array.from(tbody.querySelectorAll('tr')).filter(r => r.id !== 'noResultsRow');
+    const noResultsRow = document.getElementById('noResultsRow');
+    const clearBtn = document.getElementById('clearBtn');
+
+    // Debounce helper to reduce function calls while typing
+    function debounce(fn, delay = 150) {
+      let t;
+      return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...args), delay);
+      };
+    }
+
+      function filterRows() {
+      const q = input.value.trim().toLowerCase();
+      let visible = 0;
+
+      rows.forEach(row => {
+        // pick the cells we want to search: CNIC, Name, PK
+        const cnic = (row.querySelector('.cell-cnic')?.textContent || '').toLowerCase();
+        const name = (row.querySelector('.cell-name')?.textContent || '').toLowerCase();
+        const pk = (row.querySelector('.cell-pk')?.textContent || '').toLowerCase();
+
+        // if you want CNIC-only search, use: const match = cnic.includes(q);
+        const match = q === '' || cnic.includes(q) || name.includes(q) || pk.includes(q);
+
+        row.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+
+      // show/hide "no results" row
+      noResultsRow.classList.toggle('hidden', visible > 0);
+    }
+
+    // Wire up live search (debounced for smoother typing)
+    input.addEventListener('input', debounce(filterRows, 120));
+
+    // Clear button
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      filterRows();
+      input.focus();
+    });
+
+    // Optional: allow pressing Escape to clear
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        input.value = '';
+        filterRows();
+      }
+    });
+  })();
+</script>
+
+
 </body>
 </html>
