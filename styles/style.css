@@ -1,28 +1,2 @@
 
-body{
-      font-family: 'Open Sans', sans-serif;
-}
-h1, h2, h3, h4 {
-  font-family: 'Merriweather', serif;
-}
 
-/* ***********************************NAVBAR************************** */
-.nav-elements{
-    transition: all 0.3s ease;
-}
-.nav-elements:hover{
-     color: #037c3e !important; 
-    transform: scale(1.1);   
-}
-.active{
-    color: #037c3e !important;
-    font-weight: bold !important;
-}
-.join-btn{
-background-color:  #037c3e ;
- color :  #fff
-}
-.join-btn:hover{
-    background-color: #014220;
-    color :  #fff
-}
