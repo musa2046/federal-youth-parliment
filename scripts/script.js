@@ -17,13 +17,14 @@ setInterval(() => {
   slides[index].classList.remove("opacity-0");
   slides[index].classList.add("opacity-100");
 }, 3000);
- const year = new Date().getFullYear()
-      
-      var footerYear = document.querySelectorAll('.footerYear')
-      console.log(footerYear)
-      footerYear.forEach((e)=>{
-        e.innerHTML = year;
-      })
+
+// for footer year
+ const year = new Date().getFullYear()  
+  var footerYear = document.querySelectorAll('.footerYear')
+  console.log(footerYear)
+  footerYear.forEach((e)=>{
+    e.innerHTML = year;
+  })
 // for news section
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
