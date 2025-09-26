@@ -20,7 +20,7 @@
         <span class="ml-2 font-bold text-green-700 text-lg">Federal Youth Parliament</span>
       </a>
 
-      <!-- Mobile menu button -->
+     <!-- Mobile menu button -->
       <div class="flex items-center lg:hidden">
         <button id="mobileMenuBtn" class="text-gray-700 focus:outline-none">
           <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -233,7 +233,7 @@
 
 <!-- Certificate of Registration -->
 <section class="w-full py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-6 text-center">
+  <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
     <!-- Heading -->
     <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
       Certificate of <span class="text-green-600">Registration</span>
@@ -244,8 +244,27 @@
     </p>
 
     <!-- Certificate Image Card -->
-    <div class="bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-green-200 transition duration-500">
-      <img src="../images/about/certificate.jpg" 
+    <div class="bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-green-200 transition duration-500" data-aos="fade-up">
+      <img src="../images/about/registrationCertificate.jpg" 
+           alt="Certificate of Registration" 
+           class="w-full object-contain max-h-[700px] mx-auto" />
+    </div>
+  </div>
+</section>
+<section class="w-full py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
+      Certificate of <span class="text-green-600">Incorporation</span>
+    </h2>
+    <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
+      Our organization is officially incorporated and recognized as a legal entity.
+Below is our Certificate of Incorporation, which reflects our legitimacy and credibility.
+    </p>
+
+    <!-- Certificate Image Card -->
+    <div class="bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-green-200 transition duration-500" data-aos="fade-up">
+      <img src="../images/about/incorporationCertificate.jpg" 
            alt="Certificate of Registration" 
            class="w-full object-contain max-h-[700px] mx-auto" />
     </div>
@@ -451,7 +470,9 @@
   </div>
 </footer>
     
+<script src="../scripts/script.js"></script>
   <!-- AOS JS -->
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
