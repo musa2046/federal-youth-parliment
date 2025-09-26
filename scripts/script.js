@@ -32,4 +32,4 @@ var swiper = new Swiper(".mySwiper", {
     }
   });
   
-  // FOR SEARCH FUNCTIONALITY
+
