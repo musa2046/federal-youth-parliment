@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+     <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("b5EJUFQOzRFBQqW-j"); // Replace with your EmailJS Public Key , this is now for testing use own...
+    })();
+  </script>
 </head>
 <body>
      <!-- Navbar -->
@@ -215,6 +222,13 @@
           </label>
         </div>
 
+        <!-- Date of Birth -->
+        <label class="flex flex-col">
+          <span class="text-sm font-medium text-gray-700">Date of Birth *</span>
+          <input type="date" name="dob" required
+            class="mt-2 p-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-green-500" />
+        </label>
+
         <!-- Province -->
         <label class="flex flex-col" data-aos="fade-up">
           <span class="text-sm font-medium text-gray-700">Province / Region <span class="text-red-500">*</span></span>
@@ -327,11 +341,48 @@
 <script src="../scripts/script.js"></script>
  <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
+<!-- <script>
   AOS.init({
     duration: 1000,
     once: false, 
         
+  });
+</script> -->
+
+<script>
+  AOS.init({ duration: 1000, once: false });
+
+  document.getElementById("joinForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let form = e.target;
+    let formData = new FormData(form);
+    let data = Object.fromEntries(formData);
+
+    // 1. Send Email via EmailJS
+    emailjs.send("service_r1kj9fq", "template_ycppl1a", data)
+      .then(() => {
+        document.getElementById("success1").classList.remove("hidden");
+      })
+      .catch((err) => console.error("EmailJS Error:", err));
+
+    // 2. Redirecting to WhatsApp with message
+    let phone = "923496372662"; // my WhatsApp number in future replace with client number
+    let message = `New Registration MemeberShip Form Data For Federal Youth Parliament:%0A
+    Name: ${data.name}%0A
+    Email: ${data.email}%0A
+    Phone: ${data.phone}%0A
+    CNIC: ${data.cnic}%0A
+    Gender: ${data.gender}%0A
+    Age: ${data.age}%0A
+    Date of Birth: ${data.dob}%0A
+    Province: ${data.province}%0A
+    Education: ${data.education}`;
+
+
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+
+    form.reset();
   });
 </script>
 
